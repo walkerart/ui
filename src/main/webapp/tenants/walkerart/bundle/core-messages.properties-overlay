@@ -7,7 +7,7 @@ login-generalError: We are sorry, an error has occurred. Please try again, or co
 login-current: Walker Art Center Tenant
 login-current-info:
 login-current-details:
-login-login-info: To view the CollectionSpace Core tenant, use the login box on the right with the login:
+login-login-info: To view the Walker Art Center tenant, use the login box on the right with the login:
 login-login: admin@walkerart.org
 login-login-pwd:  and password: 
 login-login-pwdValue: Administrator
