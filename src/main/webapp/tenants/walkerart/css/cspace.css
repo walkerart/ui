@@ -400,7 +400,7 @@ li .flc-pager-pageLink {
     margin-top:15px; 
     float:left; 
     background: #fff url("../images/header-logo.png") no-repeat left top; 
-    width:270px; 
+    width:218px; /*width:270px;*/
     height:51px;}
 .header-menu-logo a {
     display:block; 
