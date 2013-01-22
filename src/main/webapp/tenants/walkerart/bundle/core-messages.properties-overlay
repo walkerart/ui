@@ -41,6 +41,7 @@ collection-object-objectProductionDateGroupLabel: Date
 collection-object-techniqueGroupLabel: Medium
 collection-object-ownersLabel: Provenance
 collection-object-textualInscriptionInformationLabel: Inscription
+collection-object-technicalAttributeMeasurementLabel: Text
 
 collection-object-formatWACLabel: Format
 collection-object-collectionWACLabel: Collection
