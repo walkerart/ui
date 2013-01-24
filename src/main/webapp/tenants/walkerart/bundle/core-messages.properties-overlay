@@ -46,3 +46,6 @@ collection-object-technicalAttributeMeasurementLabel: Text
 collection-object-formatWACLabel: Format
 collection-object-collectionWACLabel: Collection
 collection-object-catalogNumberWACLabel: Catalog Number
+
+#Acquisition
+acquisition-acquisitionReasonLabel: Curator of Record
