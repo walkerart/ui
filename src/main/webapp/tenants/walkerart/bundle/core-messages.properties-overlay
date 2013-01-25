@@ -51,3 +51,6 @@ collection-object-catalogNumberWACLabel: Catalog Number
 acquisition-acquisitionReasonLabel: Curator of Record
 
 acquisition-insuredByWACLabel: Insured by
+
+#Person
+person-occupationsLabel: Occupation/Role
