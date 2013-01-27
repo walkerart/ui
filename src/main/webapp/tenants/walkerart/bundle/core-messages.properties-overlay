@@ -54,3 +54,7 @@ acquisition-insuredByWACLabel: Insured by
 
 #Person
 person-occupationsLabel: Occupation/Role
+
+person-businessWACLabel: Business
+person-associationWACLabel: Association
+person-assistantWACLabel: Assistant
