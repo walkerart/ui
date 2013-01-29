@@ -58,3 +58,14 @@ person-occupationsLabel: Occupation/Role
 person-businessWACLabel: Business
 person-associationWACLabel: Association
 person-assistantWACLabel: Assistant
+
+#Contact
+contact-addressTypeWACLabel: Type
+contact-addressPostCodeWACLabel: Postal Code
+contact-addressMunicipalityWACLabel: Municipality
+contact-addressGroupWACLabel: Address
+contact-addressPlace1WACLabel: Line 1
+contact-addressStateOrProvinceWACLabel: State/Province
+contact-addressPlace2WACLabel: Line 2
+contact-addressCountryWACLabel: Country
+contact-addressTextWACLabel: Text
