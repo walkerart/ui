@@ -59,6 +59,9 @@ person-businessWACLabel: Business
 person-associationWACLabel: Association
 person-assistantWACLabel: Assistant
 
+#Organization
+organization-contactNamesLabel: Contact Name/Role
+
 #Contact
 contact-addressTypeWACLabel: Type
 contact-addressPostCodeWACLabel: Postal Code
