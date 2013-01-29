@@ -75,3 +75,6 @@ contact-addressTextWACLabel: Text
 
 #Loan In
 loanin-loanInConditionsLabel: Exhibition Details
+
+#Loan Out
+loanout-loanOutNoteLabel: Exhibition Details
