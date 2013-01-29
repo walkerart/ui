@@ -72,3 +72,6 @@ contact-addressStateOrProvinceWACLabel: State/Province
 contact-addressPlace2WACLabel: Line 2
 contact-addressCountryWACLabel: Country
 contact-addressTextWACLabel: Text
+
+#Loan In
+loanin-loanInConditionsLabel: Exhibition Details
