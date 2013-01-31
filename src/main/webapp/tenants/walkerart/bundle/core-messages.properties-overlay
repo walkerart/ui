@@ -78,3 +78,13 @@ loanin-loanInConditionsLabel: Exhibition Details
 
 #Loan Out
 loanout-loanOutNoteLabel: Exhibition Details
+
+#Media
+media-methodWACLabel: Method
+media-statusWACLabel: Status
+media-preferredWACLabel: Preferred
+media-remarksWACLabel: Remarks
+media-lastModifiedByWACLabel: Last modified by
+media-viewDepictedWACLabel: View depicted
+media-viewDescriptionWACLabel: View description
+media-publicallyAccessibleWACLabel: Publically accessible
