@@ -51,6 +51,12 @@ collection-object-catalogNumberWACLabel: Catalog Number
 acquisition-acquisitionReasonLabel: Curator of Record
 
 acquisition-insuredByWACLabel: Insured by
+acquisition-acquisitionFundingWACLabel: Acquisition Funding
+acquisition-acquisitionFundingCurrencyWACLabel: Currency
+acquisition-acquisitionFundingValueWACLabel: Value
+acquisition-acquisitionFundingCostWACLabel: Cost
+acquisition-acquisitionFundingSourceWACLabel: Funding source
+acquisition-acquisitionFundingSourceProvisosWACLabel: Source provisos
 
 #Person
 person-occupationsLabel: Occupation/Role
