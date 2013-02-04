@@ -94,3 +94,7 @@ media-lastModifiedByWACLabel: Last modified by
 media-viewDepictedWACLabel: View depicted
 media-viewDescriptionWACLabel: View description
 media-publicallyAccessibleWACLabel: Publically accessible
+
+#Movement
+movement-onViewWACLabel: On view
+movement-onViewLocationWACLabel: On view location
