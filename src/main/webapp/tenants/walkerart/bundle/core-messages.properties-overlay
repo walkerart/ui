@@ -98,3 +98,32 @@ media-publicallyAccessibleWACLabel: Publically accessible
 #Movement
 movement-onViewWACLabel: On view
 movement-onViewLocationWACLabel: On view location
+
+#Variable Media domain extension
+collection-object-filmAndVideoComponentsInformationLabel: Film and Video Components Information
+collection-object-originalFormatGroupLabel: Original Format
+collection-object-originalFormatLabel: Original Format
+collection-object-originalAudioFormatLabel: Original Audo Format
+collection-object-copiesProvidedOnAcquisitionLabel: Copies Provided on Acquisition
+collection-object-copyProvidedOnAcquisitionLabel: Copies Provided on Acquisition
+
+collection-object-digitalWorksInformationLabel: Digital Works Information
+collection-object-digitalWorksGroupLabel: Digital Works
+digitalWorksGroup-programmingLanguageSubGroupLabel: Programming Languages
+collection-object-programmingLanguageLabel: Programming Language
+collection-object-authoringEnvironmentLabel: Authoring Environment
+digitalWorksGroup-compressionSystemsUsedLabel: Sound and Video Compression Systems Used
+digitalWorksGroup-compressionSystemUsedLabel: Sound and Video Compression Systems Used
+digitalWorksGroup-ratioFormatsLabel: Ratio Format
+digitalWorksGroup-ratioFormatLabel: Ratio Format
+collection-object-nonStandardCodeLabel: Non-standard Code
+collection-object-sourcesOfExternalDataLabel: Sources of External Data
+digitalWorksGroup-preferredScreenResolutionSubGroupLabel: Preferred Screen Resolutions
+collection-object-preferredScreenResolutionLabel: Preferred Screen Resolution
+collection-object-preferredColorPaletteLabel: Preferred Color Palette
+digitalWorksGroup-creationHardwaresLabel: Creation Hardware
+digitalWorksGroup-creationHardwareLabel: Creation Hardware
+digitalWorksGroup-playbackHardwaresLabel: Playback Hardware
+digitalWorksGroup-playbackHardwareLabel: Playback Hardware
+
+

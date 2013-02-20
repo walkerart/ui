@@ -80,11 +80,19 @@ table tr.csc-repeatable-repeat input.cs-repeatable-delete[disabled]:focus {
 	background-position:2px 1px; height:15px;}
 	
 .cs-repeatable-group .cs-repeatable-repeat ,
-.cs-repeatable-group .cs-repeatable-repeat ,
 .cs-repeatable-withSubgroup .cs-repeatable-repeat  {
 	border:1px solid #CCC;
 	background-color:#E2E2E2;
 	float: left;
+}
+
+.cs-repeatable-withSubgroup li.cs-repeatable-repeat ul.cs-repeatable li.cs-repeatable-repeat  {
+    border:none;
+    padding-top:0;
+}
+
+.cs-repeatable-withSubgroup li.cs-repeatable-repeat ul.cs-repeatable li.cs-repeatable-repeat input {
+    float: left;
 }
 
 .cs-repeatable-group .cs-repeatable-repeat .cs-repeatable-content,
@@ -179,7 +187,8 @@ ul.cs-repeatable li.cs-repeatable-repeat div.cs-termList select {
 input.cs-autocomplete-input,
 ul.cs-repeatable li.cs-repeatable-repeat input.cs-autocomplete-input,
 ul.cs-repeatable li.cs-repeatable-repeat input.cs-repeatable-content,
-ul.cs-repeatable li.cs-repeatable-repeat textarea.cs-repeatable-content {
+ul.cs-repeatable li.cs-repeatable-repeat textarea.cs-repeatable-content,
+li.cs-repeatable-repeat ul.cs-repeatable li.cs-repeatable-repeat input.cs-repeatable-content {
     width: 88.5%;
 }
 
