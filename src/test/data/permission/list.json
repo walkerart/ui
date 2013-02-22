@@ -50,6 +50,13 @@
             "recordtype": "permission"
         },
         {
+            "summary": "conditioncheck",
+            "display": "show",
+            "csid": "aaaabbbb-d8e5-1111-aaaa-92a744ae807b",
+            "number": "CRUDL",
+            "recordtype": "permission"
+        },
+        {
             "summary": "objectexit",
             "display": "show",
             "csid": "a7ad107d-8e9b-46bb-a327-c740dd4a5ede",

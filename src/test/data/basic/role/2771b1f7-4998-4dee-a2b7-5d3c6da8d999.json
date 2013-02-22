@@ -29,6 +29,10 @@
             },
             {
                 "permission": "delete",
+                "resourceName": "conditioncheck"
+            },
+            {
+                "permission": "delete",
                 "resourceName": "media"
             },
             {
