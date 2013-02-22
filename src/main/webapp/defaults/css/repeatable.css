@@ -90,9 +90,17 @@ table tr.csc-repeatable-repeat input.cs-repeatable-delete[disabled]:focus {
     border:none;
     padding-top:0;
 }
-
 .cs-repeatable-withSubgroup li.cs-repeatable-repeat ul.cs-repeatable li.cs-repeatable-repeat input {
     float: left;
+}
+
+.oocss .cs-repeatable-group ul.cs-repeatable li.cs-repeatable-repeat,
+.cs-repeatable-group ul.cs-repeatable li.cs-repeatable-repeat {
+    padding:4px 0 4px 4px;
+}
+
+.cs-repeatable-group ul.cs-repeatable li.cs-repeatable-repeat:last-child {
+    margin-bottom: 18px;
 }
 
 .cs-repeatable-group .cs-repeatable-repeat .cs-repeatable-content,
