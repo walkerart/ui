@@ -2,6 +2,41 @@
     <div class="csc-person-personNameAuthorityInformation-label csc-recordEditor-header fl-container-flex header toggle"></div>
     <div class="csc-recordEditor-togglable fl-container-flex fl-fix content main">
         <div class="info-column">
+            <div class="info-column3 fl-force-left">
+                <div class="info-pair-select">
+                    <div class="header">
+                        <div class="csc-person-recordTypeWAC-label label"></div>
+                    </div>
+                    <div class="content">
+                        <select class="csc-personAuthority-recordTypeWAC input-select"><option value="">Options not loaded</option></select>
+                    </div>
+                </div>
+            </div>
+            <div class="info-column3 fl-force-left">
+                <div class="info-pair-select">
+                    <div class="header">
+                        <div class="csc-person-recordStatusWAC-label label"></div>
+                    </div>
+                    <div class="content">
+                        <select class="csc-personAuthority-recordStatusWAC input-select"><option value="">Options not loaded</option></select>
+                    </div>
+                </div>
+            </div>
+            <div class="info-column3 fl-force-right">
+                <div class="info-pair">
+                    <div class="header">
+                        <div class="csc-person-updatedAt-label label"></div>
+                    </div>
+                    <div class="content read-only">
+                        <div class="bundle">
+                            <input type="text" disabled="disabled" class="csc-person-updatedAt cs-person-updatedAt" /><div class="by-text"></div><input type="text" disabled="disabled" class="csc-person-updatedBy cs-person-updatedBy" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-column">
             <div class="info-pair">
                 <div class="header">
                     <div class="label csc-person-preferredPerson-label"></div>
@@ -11,9 +46,28 @@
                 </div>
             </div>
         </div>
+
+        <div class="info-column">
+            <div class="info-pair">
+                <div class="header">
+                    <div class="csc-person-nameNote-label label"></div>
+                </div>
+                <div class="content">
+                    <input type="text" class="csc-personAuthority-nameNote" />
+                </div>
+            </div>
+        </div>
                     
         <div class="info-column">
             <div class="info-column2-50 fl-force-left">
+                <div class="info-pair">
+                    <div class="header">
+                        <div class="csc-person-nationalities-label label"></div>
+                    </div>
+                    <div class="content">
+                        <select class="csc-personAuthority-nationality input-select"><option value="">Options not loaded</option></select>
+                    </div>
+                </div>
                 <div class="info-column">
                     <div class="info-pair-select">
                         <div class="header">
@@ -26,49 +80,20 @@
                 </div>
                 <div class="info-pair">
                     <div class="header">
-                        <div class="csc-person-occupations-label label"></div>
-                    </div>
-                    <div class="content">
-                        <select class="csc-personAuthority-occupation input-select"><option value="">Options not loaded</option></select>
-                    </div>
-                </div>
-                
-                <!--div class="info-pair">
-                    <div class="header">
-                        <div class="csc-person-schoolsOrStyles-label label"></div>
-                    </div>
-                    <div class="content">
-                        <input type="text" class="csc-personAuthority-schoolOrStyle" />
-                    </div>
-                </div-->
-                
-                <div class="info-pair">
-                    <div class="header">
                         <div class="csc-person-groups-label label"></div>
                     </div>
                     <div class="content">
                         <select class="csc-personAuthority-group input-select"><option value="">Options not loaded</option></select>
                     </div>
                 </div>
-
                 <div class="info-pair">
                     <div class="header">
-                        <div class="csc-person-businessWAC-label label"></div>
+                        <div class="csc-person-occupations-label label"></div>
                     </div>
                     <div class="content">
-                        <input type="text" class="csc-personAuthority-businessWAC" />
+                        <select class="csc-personAuthority-occupation input-select"><option value="">Options not loaded</option></select>
                     </div>
                 </div>
-
-                <div class="info-pair">
-                    <div class="header">
-                        <div class="csc-person-assistantWAC-label label"></div>
-                    </div>
-                    <div class="content">
-                        <input type="text" class="csc-personAuthority-assistantWAC" />
-                    </div>
-                </div>
-                
                 <div class="info-pair">
                     <div class="header">
                         <div class="csc-person-associationWAC-label label"></div>
@@ -77,27 +102,25 @@
                         <select class="csc-personAuthority-associationWAC input-select"><option value="">Options not loaded</option></select>
                     </div>
                 </div>
-
                 <div class="info-pair">
                     <div class="header">
-                        <div class="csc-person-nationalities-label label"></div>
+                        <div class="csc-person-businessWAC-label label"></div>
                     </div>
                     <div class="content">
-                        <select class="csc-personAuthority-nationality input-select"><option value="">Options not loaded</option></select>
+                        <input type="text" class="csc-personAuthority-businessWAC" />
                     </div>
                 </div>
+                <!--div class="info-pair">
+                    <div class="header">
+                        <div class="csc-person-schoolsOrStyles-label label"></div>
+                    </div>
+                    <div class="content">
+                        <input type="text" class="csc-personAuthority-schoolOrStyle" />
+                    </div>
+                </div-->
             </div>
             
             <div class="info-column2-50 fl-force-right">
-                <div class="info-pair">
-                    <div class="header">
-                        <div class="csc-person-nameNote-label label"></div>
-                    </div>
-                    <div class="content">
-                        <textarea rows="4" cols="30" class="input-textarea csc-personAuthority-nameNote" ></textarea>
-                    </div>
-                </div>
-                
                 <div class="info-column">
                     <div class="info-column2-50 fl-force-left">
                         <div class="info-pair-date">
@@ -139,13 +162,20 @@
                         </div>                              
                     </div>
                 </div>
-                
                 <div class="info-pair">
                     <div class="header">
                         <div class="csc-person-bioNote-label label"></div>
                     </div>
                     <div class="content">
                         <textarea rows="4" cols="30" class="input-textarea csc-personAuthority-bioNote"></textarea>
+                    </div>
+                </div>
+                <div class="info-pair">
+                    <div class="header">
+                        <div class="csc-person-assistantWAC-label label"></div>
+                    </div>
+                    <div class="content">
+                        <input type="text" class="csc-personAuthority-assistantWAC" />
                     </div>
                 </div>
             </div>

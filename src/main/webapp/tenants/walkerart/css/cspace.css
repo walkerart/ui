@@ -1682,6 +1682,50 @@ a.cs-searchBox-advancedSearch, a.cs-listView-header-link {
     display: none;
 }
 
+.read-only .cs-calendar-button,
+.read-only .cs-date-picker {
+    display:none;
+}
+
+/* WAC additions */
+.read-only .bundle  {
+    overflow:hidden;
+}
+.read-only .bundle input,
+.read-only .bundle input:hover,
+.read-only .bundle input[disabled],
+.read-only .bundle input[disabled]:hover {
+    border:none;
+    background-color: inherit !important;
+}
+.read-only .bundle .by-text {
+    width:1px;
+    display:inline-block;
+    padding: 4px 15px 5px 0;
+}
+.read-only .bundle .by-text:before {
+    content:"by ";
+    color:#606060;
+}
+.read-only .bundle .cs-person-updatedAt {
+    min-width:0px;
+    width:135px !important;
+}
+.read-only .bundle .cs-person-updatedBy {
+    min-width:150px;
+    width:230px;
+}
+/*.read-only .bundle input {
+    border-left:none;
+    border-right:none;
+}
+.read-only .bundle input:first-child {
+    border-left:1px solid #CCC;
+}
+.read-only .bundle input:last-child {
+    border-right:1px solid #CCC;
+}*/
+
 /* hack! Need to remove controls programatically */
 
 
