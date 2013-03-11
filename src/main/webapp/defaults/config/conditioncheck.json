@@ -10,7 +10,7 @@
                             "identificationNumber": ".csc-conditioncheck-conditioncheckRefNumber"
                         },
                         "uispec": "{pageBuilder}.options.uispec.recordEditor",
-                        "fieldsToIgnore": ["csid", "fields.csid", "fields.conditionCheckRefNumber"]
+                        "fieldsToIgnore": ["csid", "fields.csid", "fields.conditionCheckRefNumber", "fields.narrowerContexts"]
                     }
                 },
                 "titleBar": {
