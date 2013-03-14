@@ -30,7 +30,8 @@ cspace.tests.sampleSchema = {
                     "person",
                     "organization",
                     "place",
-                    "concept"
+                    "concept",
+                    "exhibition"
                 ],
                 "type": "array"
             },
@@ -64,6 +65,7 @@ cspace.tests.sampleSchema = {
             "organization",
             "place",
             "concept",
+            "exhibition",
             "cataloging",
             "movement",
             "objectexit",
@@ -136,6 +138,24 @@ cspace.tests.sampleSchema = {
                         "properties": {
                             "order": {
                                 "default": 2,
+                                "type": "integer"
+                            },
+                            "nptAllowed": {
+                                "default": true,
+                                "type": "boolean"
+                            }
+                        },
+                        "type": "object"
+                    }
+                },
+                "type": "object"
+            },
+            "exhibition": {
+                "properties": {
+                    "exhibition": {
+                        "properties": {
+                            "order": {
+                                "default": 0,
                                 "type": "integer"
                             },
                             "nptAllowed": {
@@ -254,6 +274,7 @@ cspace.tests.sampleUserPerms = {
         "organization": ["create", "read", "update", "delete", "list"],
         "place": ["create", "read", "update", "delete", "list"],
         "concept": ["create", "read", "update", "delete", "list"],
+        "exhibition": ["create", "read", "update", "delete", "list"],
         "movement": ["create", "read", "update", "delete", "list"],
         "cataloging": ["create", "read", "update", "delete", "list"],
         "media": ["create", "read", "update", "delete", "list"],
@@ -272,6 +293,7 @@ cspace.tests.fullPerms = {
         "organization": ["create", "read", "update", "delete", "list"],
         "place": ["create", "read", "update", "delete", "list"],
         "concept": ["create", "read", "update", "delete", "list"],
+        "exhibition": ["create", "read", "update", "delete", "list"],
         "media": ["create", "read", "update", "delete", "list"],
         "users": ["create", "read", "update", "delete", "list"]
 };

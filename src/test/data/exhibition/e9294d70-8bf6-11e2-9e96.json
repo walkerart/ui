@@ -1,0 +1,104 @@
+{
+    "termsUsed": [
+        {
+            "csid": "987.654.321",
+            "number": "Maria Organizer",
+            "sourceFieldName": "exhibitionOrganizer",
+            "recordtype": "person" 
+        },
+        {
+            "csid": "123.456.789",
+            "number": "Sean Sponsor",
+            "sourceFieldName": "exhibitionSponsor",
+            "recordtype": "person" 
+        },
+        {
+            "csid": "135.79.000",
+            "number": "Shelf 1",
+            "sourceFieldName": "exhibitionLocationInternal",
+            "recordtype": "location" 
+        },
+        {
+            "csid": "111.222.333.444",
+            "number": "Gallery 1",
+            "sourceFieldName": "exhibitionLocationExternal",
+            "recordtype": "location" 
+        }
+    ],
+    "relations": [],
+    "csid": "e9294d70-8bf6-11e2-9e96",
+    "refobjs": [],
+    "namespace": "exhibition",
+    "fields": {
+        "csid": "e9294d70-8bf6-11e2-9e96",
+        "updatedBy": "admin@core.collectionspace.org",
+        "shortIdentifier": "exhibitiontest1",
+        "updatedAt": "2013-03-13T02:11:53Z",
+        "createdBy": "admin@core.collectionspace.org",
+        "broaderContext": "",
+        "createdAt": "2012-03-28T02:11:53Z",
+        "refName": "urn:cspace:core.collectionspace.org:exhibitionauthorities:name(exhibition):item:name(SpaceWars8673509000000)'Space Wars! (2013)'",
+        "narrowerContexts": [{
+            "_primary": true
+        }],
+        "equivalentContexts": [{
+            "_primary": true
+        }],
+        "relatedTerms": [{
+            "_primary": true
+        }],
+        "authorityid": "6ca3db57-7c96-47b6-b17d",
+        "refid": "urn:cspace:core.collectionspace.org:exhibitionauthorities:name(exhibition):item:name(SpaceWars8673509000000)'Space Wars! (2013)'",
+        "shortDisplayName": "Space Wars!",
+        "recordtype": "exhibition",
+        "displayName": "Space Wars! (2013)",
+        "recordtype": "exhibition",
+        "exhibitionTermGroup": [
+            {
+                "_primary": true,
+                "termDisplayName": "Space Wars! (2013)",
+                "termName": "Space Wars!",
+                "termLanguage": "english",
+                "termPrefForLang": true,
+                "termType": "public name",
+                "termQualifier": "term qualifier",
+                "termSource": "internal",
+                "termSourceID": "12345",
+                "termSourceDetail": "internal",
+                "termSourceNote": "source note goes here",
+                "termStatus": "accepted"
+            }
+        ],
+        "exhibitionStartDate": "2013-03-01",
+        "exhibitionEndDate": "2014-03-31",
+        "exhibitionRemarks": "remark goes here",
+        "exhibitionOrganizers": [
+            {
+                "_primary": true,
+                "exhibitionOrganizer": "urn:cspace:core.collectionspace.org:personauthorities:name(person):item:name(MariaOrganizer)'Maria Organizer'",
+                "de-urned-exhibitionOrganizer": "Maria Organizer"
+            }
+        ],
+        "exhibitionSponsors": [
+            {
+                "_primary": true,
+                "exhibitionSponsor": "urn:cspace:core.collectionspace.org:personauthorities:name(person):item:name(SeanSponsor)'Sean Sponsor'",
+                "de-urned-exhibitionSponsor": "Sean Sponsor"
+            }
+        ],
+        "exhibitionLocationsInternal": [
+            {
+                "_primary": true,
+                "exhibitionLocationInternal": "urn:cspace:core.collectionspace.org:locationauthorities:name(location):item:name(Shelf1)'Shelf 1'",
+                "de-urned-exhibitionLocationInternal": "Shelf 1"
+            }
+        ],
+        "exhibitionLocationsExternal": [
+            {
+                "_primary": true,
+                "exhibitionLocationExternal": "urn:cspace:core.collectionspace.org:locationauthorities:name(offsite_sla):item:name(Gallery1)'Gallery 1'",
+                "de-urned-exhibitionLocationExternal": "Gallery 1"
+            }
+        ]
+    }
+}

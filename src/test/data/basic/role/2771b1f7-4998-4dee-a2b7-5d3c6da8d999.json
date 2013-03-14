@@ -45,6 +45,10 @@
             },
             {
                 "permission": "delete",
+                "resourceName": "exhibition"
+            },
+            {
+                "permission": "delete",
                 "resourceName": "location"
             },
             {
@@ -74,6 +78,10 @@
             {
                 "permission": "delete",
                 "resourceName": "concept"
+            },
+            {
+                "permission": "delete",
+                "resourceName": "exhibition"
             },
             {
                 "permission": "delete",
@@ -130,6 +138,10 @@
             {
                 "permission": "delete",
                 "resourceName": "concepts"
+            },
+            {
+                "permission": "delete",
+                "resourceName": "exhibitions"
             },
             {
                 "permission": "delete",
