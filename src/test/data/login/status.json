@@ -41,6 +41,13 @@
             "delete",
             "list"
         ],
+        "exhibition": [
+            "create",
+            "read",
+            "update",
+            "delete",
+            "list"
+        ],
         "place": [
             "create",
             "read",

@@ -31,7 +31,8 @@ cspace.tests.sampleSchema = {
                     "organization",
                     "place",
                     "work",
-                    "concept"
+                    "concept",
+                    "exhibition"
                 ],
                 "type": "array"
             },
@@ -68,6 +69,7 @@ cspace.tests.sampleSchema = {
             "place",
             "work",
             "concept",
+            "exhibition",
             "cataloging",
             "movement",
             "objectexit",
@@ -140,6 +142,24 @@ cspace.tests.sampleSchema = {
                         "properties": {
                             "order": {
                                 "default": 2,
+                                "type": "integer"
+                            },
+                            "nptAllowed": {
+                                "default": true,
+                                "type": "boolean"
+                            }
+                        },
+                        "type": "object"
+                    }
+                },
+                "type": "object"
+            },
+            "exhibition": {
+                "properties": {
+                    "exhibition": {
+                        "properties": {
+                            "order": {
+                                "default": 0,
                                 "type": "integer"
                             },
                             "nptAllowed": {
@@ -291,6 +311,7 @@ cspace.tests.sampleUserPerms = {
         "place": ["create", "read", "update", "delete", "list"],
         "work": ["create", "read", "update", "delete", "list"],
         "concept": ["create", "read", "update", "delete", "list"],
+        "exhibition": ["create", "read", "update", "delete", "list"],
         "movement": ["create", "read", "update", "delete", "list"],
         "cataloging": ["create", "read", "update", "delete", "list"],
         "media": ["create", "read", "update", "delete", "list"],
@@ -311,6 +332,7 @@ cspace.tests.fullPerms = {
         "place": ["create", "read", "update", "delete", "list"],
         "work": ["create", "read", "update", "delete", "list"],
         "concept": ["create", "read", "update", "delete", "list"],
+        "exhibition": ["create", "read", "update", "delete", "list"],
         "media": ["create", "read", "update", "delete", "list"],
         "users": ["create", "read", "update", "delete", "list"]
 };
