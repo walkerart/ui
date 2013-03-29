@@ -94,6 +94,11 @@ loanin-loanInConditionsLabel: Exhibition Details
 #Loan Out
 loanout-loanOutNoteLabel: Exhibition Details
 
+#exhibition
+exhibition-preferredExhibitionLabel: Exhibition Title Group(s)
+exhibition-exhibitionLocationInternalLabel: Walker location
+
+
 #Media
 media-methodWACLabel: Method
 media-statusWACLabel: Status

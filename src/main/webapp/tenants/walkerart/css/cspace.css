@@ -1698,20 +1698,35 @@ a.cs-searchBox-advancedSearch, a.cs-listView-header-link {
     border:none;
     background-color: inherit !important;
 }
+.read-only .bundle .cs-updatedAt {
+    width:11.3em !important;
+    min-width:0;
+    display:inline-block;
+}
+.read-only .bundle input.cs-updatedBy {
+    width:auto !important;
+    min-width:0;
+    display:inline-block;
+    overflow-x: hidden;
+}
+.read-only .bundle input.cs-updatedBy:before {
+    content:"by";
+    padding:0 .5em;
+}
 .read-only .bundle .by-text {
     width:1px;
     display:inline-block;
-    padding: 4px 15px 5px 0;
+    padding: 4px 1.5em 5px 0;
 }
 .read-only .bundle .by-text:before {
     content:"by ";
     color:#606060;
 }
-.read-only .bundle .cs-person-updatedAt {
+.readz-only .bundle .cs-person-updatedAt {
     min-width:0px;
     width:135px !important;
 }
-.read-only .bundle .cs-person-updatedBy {
+.readz-only .bundle .cs-person-updatedBy {
     min-width:150px;
     width:230px;
 }
