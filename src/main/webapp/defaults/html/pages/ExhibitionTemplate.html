@@ -1,5 +1,5 @@
 <div class="fl-container-flex fl-fix information-group info-column">
-    <div class="csc-recordEditor-header fl-container-flex header toggle csc-work-exhibitionAuthorityInformation-label"></div>
+    <div class="csc-recordEditor-header fl-container-flex header toggle csc-exhibition-exhibitionAuthorityInformation-label"></div>
     <div class="csc-recordEditor-togglable fl-container-flex fl-fix content main">
 
         <div class="info-column">
@@ -25,10 +25,27 @@
                 </div>
                 <div class="info-pair">
                     <div class="header">
-                        <div class="label csc-exhibition-exhibitionSponsor-label"></div>
+                        <div class="label csc-exhibition-exhibitionVenueGroup-label"></div>
                     </div>
                     <div class="content">
-                        <input type="text" class="csc-exhibition-exhibitionSponsor"/>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td class="csc-exhibition-venueName-label"></td>
+                                    <td class="csc-exhibition-venueStartDate-label"></td>
+                                    <td class="csc-exhibition-venueEndDate-label"></td>
+                                    <td class="csc-exhibition-venueAttendance-label"></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="csc-exhibition-exhibitionVenueGroup">
+                                    <td><input type="text" class="csc-exhibition-venueName" /></td>
+                                    <td><input type="text" class="csc-exhibition-venueStartDate" /></td>
+                                    <td><input type="text" class="csc-exhibition-venueEndDate" /></td>
+                                    <td><input type="text" class="csc-exhibition-venueAttendance" /></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
                 <div class="info-pair">
@@ -41,29 +58,37 @@
                 </div>
                 <div class="info-pair">
                     <div class="header">
-                        <div class="label csc-exhibition-exhibitionLocationExternal-label"></div>
+                        <div class="label csc-exhibition-exhibitionCurator-label"></div>
                     </div>
                     <div class="content">
-                        <input type="text" class="csc-exhibition-exhibitionLocationExternal"/>
+                        <input type="text" class="csc-exhibition-exhibitionCurator"/>
+                    </div>
+                </div>
+                <div class="info-pair">
+                    <div class="header">
+                        <div class="label csc-exhibition-exhibitionLink-label"></div>
+                    </div>
+                    <div class="content">
+                        <input type="text" class="csc-exhibition-exhibitionLink"/>
                     </div>
                 </div>
             </div>
 
             <div class="info-column2-50 fl-force-right">
-                <div class="info-pair-date">
+                <div class="info-pair">
                     <div class="header">
-                        <div class="label csc-exhibition-exhibitionStartDate-label"></div>
+                        <div class="label csc-exhibition-exhibitionPublication-label"></div>
                     </div>
                     <div class="content">
-                        <input type="text" class="csc-exhibition-exhibitionStartDate"/>
+                        <select class="csc-exhibition-exhibitionPublication input-select"><option value="">Options not loaded</option></select>
                     </div>
                 </div>
-                <div class="info-pair-date">
+                <div class="info-pair">
                     <div class="header">
-                        <div class="label csc-exhibition-exhibitionEndDate-label"></div>
+                        <div class="label csc-exhibition-exhibitionCatalogue-label"></div>
                     </div>
                     <div class="content">
-                        <input type="text" class="csc-exhibition-exhibitionEndDate"/>
+                        <textarea rows="4" cols="30" class="input-textarea csc-exhibition-exhibitionCatalogue"></textarea>
                     </div>
                 </div>
                 <div class="info-pair">
