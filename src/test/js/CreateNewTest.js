@@ -56,6 +56,7 @@ var createNewTester = function ($) {
     fluid.model.copyModel(lessPermissions, cspace.tests.sampleUserPerms);
     lessPermissions.loanin = [];
     lessPermissions.movement = [];
+    lessPermissions.presentation = [];
     lessPermissions.intake = ["create", "read", "update", "delete", "list"];
     
     var createNewTestLessPerms = cspace.tests.testEnvironment({
@@ -78,7 +79,9 @@ var createNewTester = function ($) {
             jqUnit.assertTrue("Intake ("+str+") shown", $('label:contains("'+str+'")').length == 1);
             str = createNewPage.options.parentBundle.messageBase.loanout;
             jqUnit.assertTrue("Loan out ("+str+") shown", $('label:contains("'+str+'")').length == 1);
-            //styling:
+            str = createNewPage.options.parentBundle.messageBase.presentation;
+            jqUnit.assertTrue("Presentation ("+str+") not shown", $('label:contains("'+str+'")').length < 1);
+            styling:
             assertStyling(createNewPage, createNewPage.options.styles.totalOf3);
             start();
         };
@@ -127,6 +130,7 @@ var createNewTester = function ($) {
     lessCategories.person = [];
     lessCategories.loanout = [];
     lessCategories.loanin = [];
+    lessCategories.presentation = [];
     lessCategories.movement = [];
     lessCategories.media = [];
     
