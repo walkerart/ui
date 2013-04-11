@@ -1,0 +1,60 @@
+{
+    "csid": "222-333-4444-5555",
+    "fields": {
+        "presentationRefNumber": "PR2013.001",
+        "presentationPresenter": "urn:cspace:core.collectionspace.org:personauthorities:name(person):item:name(WalkerArtCenter)'Walker Art Center'",
+        "presentationType":"premiere",
+        "exhibitionTitle": "urn:cspace:core.collectionspace.org:exhibitionauthorities:name(exhibition):item:name(YvesKlienWiththeVoidFullPowers)'Yves Klien: With the Void, Full Powers'",
+        "overrideExhibitionVenues": true,
+        "updatedExhibitionVenueGroup": [
+            {
+                "_primary": true,
+                "updatedVenueName": "urn:cspace:core.collectionspace.org:personauthorities:name(person):item:name(WalkerArtCenter)'Walker Art Center'",
+                "updatedVenueStartDate": "2010-10-23",
+                "updatedVenueEndDate": "2011-02-13",
+                "updatedVenueAttendance": "234567"
+            }
+        ],
+        "presentationLocationInternal": "urn:cspace:core.collectionspace.org:locationauthorities:name(location):item:name(Gallery4)'Gallery 4'",
+        "circulatedVenues": "circulated venues go here",
+        "presentationNote": "presentation note goes here"
+    },
+    "termsUsed": [
+        {
+            "csid": "123.456.789",
+            "number": "Walker Art Center",
+            "sourceFieldName": "presentationPresenter",
+            "recordtype": "person"
+        },
+        {
+            "csid": "123.456.789",
+            "number": "Yves Klien: With the Void, Full Powers",
+            "sourceFieldName": "exhibitionTitle",
+            "recordtype": "exhibition"
+        },
+        {
+            "csid": "123.456.789",
+            "number": "Walker Art Center",
+            "sourceFieldName": "updatedVenueName",
+            "recordtype": "person"
+        },
+        {
+            "csid": "123.456.789",
+            "number": "Gallery 4",
+            "sourceFieldName": "presentationLocationInternal",
+            "recordtype": "location"
+        }
+    ],
+    "relations": {
+        "cataloging": [
+            {
+                "summary": "Souvenir books. Molly O' Play Book.",
+                "csid": "2005.018.1383",
+                "number": "2005.018.1383",
+                "relid": "e8d20612-e1f5-4e90-bc36",
+                "relationshiptype": "affects",
+                "recordtype": "cataloging"
+            }
+        ]
+    }
+}

@@ -36,6 +36,10 @@
                 "resourceName": "media"
             },
             {
+                "permission": "delete",
+                "resourceName": "presentation"
+            },
+            {
                 "permission": "read",
                 "resourceName": "movement"
             },

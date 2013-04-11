@@ -26,6 +26,7 @@ var searchBoxTester = function ($) {
         "conditioncheck": ["create", "read", "update", "delete", "list"],
         "userrole": ["create", "read", "update", "delete", "list"],
         "loanout": ["create", "read", "update", "delete", "list"],
+        "presentation": ["create", "read", "update", "delete", "list"],
         "contact": ["create", "read", "update", "delete", "list"],
         "id": ["create", "read", "update", "delete", "list"],
         "acquisition": ["create", "read", "update", "delete", "list"],
@@ -65,7 +66,7 @@ var searchBoxTester = function ($) {
         var searchBox = setupSearchBox({related: "all"});
         searchBox.refreshView();
         // 9 expected for 10 members of "all" category minus person which has no read permission
-        jqUnit.assertEquals("SearchBox dropdown\'s number of recordTypes is equal to", 9, $("option", searchBox.locate("recordTypeSelect")).length);
+        jqUnit.assertEquals("SearchBox dropdown\'s number of recordTypes is equal to", 10, $("option", searchBox.locate("recordTypeSelect")).length);
         jqUnit.assertEquals("Label is ", "", searchBox.locate("recordTypeSelectLabel").text());
     });
     

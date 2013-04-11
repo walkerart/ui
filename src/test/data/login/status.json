@@ -125,6 +125,13 @@
             "delete",
             "list"
         ],
+        "presentation": [
+            "create",
+            "read",
+            "update",
+            "delete",
+            "list"
+        ],
         "cataloging": [
             "create",
             "read",
