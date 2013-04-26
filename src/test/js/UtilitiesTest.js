@@ -275,6 +275,7 @@ var utilitiesTester = function ($) {
         "place": ["create", "read", "update", "delete", "list"],
         "concept": ["create", "read", "update", "delete", "list"],
         "movement": ["create", "read", "update", "delete", "list"],
+        "valuationcontrol": ["create", "read", "update", "delete", "list"],
         "objectexit": ["create", "read", "update", "delete", "list"],
         "objects": ["create", "read", "update", "delete", "list"]
     };
@@ -468,6 +469,7 @@ var utilitiesTester = function ($) {
                 "concept",
                 "cataloging",
                 "movement",
+                "valuationcontrol",
                 "objectexit",
                 "media"
             ],
@@ -478,6 +480,7 @@ var utilitiesTester = function ($) {
                 "loanout",
                 "acquisition",
                 "movement",
+                "valuationcontrol",
                 "objectexit",
                 "media"
             ],
@@ -501,6 +504,7 @@ var utilitiesTester = function ($) {
                 "concept",
                 "cataloging",
                 "movement",
+                "valuationcontrol",
                 "objectexit",
                 "media"
             ],
@@ -511,6 +515,7 @@ var utilitiesTester = function ($) {
                 "loanout",
                 "acquisition",
                 "movement",
+                "valuationcontrol",
                 "objectexit",
                 "media"
             ],
@@ -535,6 +540,7 @@ var utilitiesTester = function ($) {
                 "concept",
                 "cataloging",
                 "movement",
+                "valuationcontrol",
                 "objectexit",
                 "media"
             ],
@@ -546,7 +552,8 @@ var utilitiesTester = function ($) {
                 "loanout",
                 "media",
                 "movement",
-                "objectexit"
+                "objectexit",
+                "valuationcontrol"
             ],
             "vocabularies": [
                 "concept",

@@ -92,6 +92,13 @@
             "recordtype": "permission"
         },
         {
+            "summary": "valuationcontrol",
+            "display": "show",
+            "csid": "6ce4c946-6dc0-428f-b782-e190b5378957",
+            "number": "CRUDL",
+            "recordtype": "permission"
+        },
+        {
             "summary": "workflow",
             "display": "none",
             "csid": "4b4e9200-eb1b-47e9-97d9-c448703bc964",

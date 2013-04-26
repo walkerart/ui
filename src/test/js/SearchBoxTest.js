@@ -31,6 +31,7 @@ var searchBoxTester = function ($) {
         "organization": ["create", "read", "update", "delete", "list"],
         "locations": ["create", "read", "update", "delete", "list"],
         "movement": ["create", "read", "update", "delete", "list"],
+        "valuationcontrol": ["create", "read", "update", "delete", "list"],
         "objectexit": ["create", "read", "update", "delete", "list"],
         "role": ["create", "read", "update", "delete", "list"],
         "dimensions": ["create", "read", "update", "delete", "list"],
@@ -63,8 +64,8 @@ var searchBoxTester = function ($) {
     searchBoxTest.test("Init and render", function () {
         var searchBox = setupSearchBox({related: "all"});
         searchBox.refreshView();
-        // 8 expected for 9 members of "all" category minus person which has no read permission
-        jqUnit.assertEquals("SearchBox dropdown\'s number of recordTypes is equal to", 8, $("option", searchBox.locate("recordTypeSelect")).length);
+        // 9 expected for 10 members of "all" category minus person which has no read permission
+        jqUnit.assertEquals("SearchBox dropdown\'s number of recordTypes is equal to", 9, $("option", searchBox.locate("recordTypeSelect")).length);
         jqUnit.assertEquals("Label is ", "", searchBox.locate("recordTypeSelectLabel").text());
     });
     
