@@ -45,6 +45,10 @@
             },
             {
                 "permission": "delete",
+                "resourceName": "valuationcontrol"
+            },
+            {
+                "permission": "delete",
                 "resourceName": "objectexit"
             },
             {

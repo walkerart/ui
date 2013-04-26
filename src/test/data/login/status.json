@@ -175,6 +175,13 @@
             "list",
             "lock"
         ],
+        "valuationcontrol": [
+            "create",
+            "read",
+            "update",
+            "delete",
+            "list"
+        ],
         "role": [
             "create",
             "read",

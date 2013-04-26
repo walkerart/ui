@@ -33,6 +33,7 @@ cspace = cspace || {};
             conditioncheck: ".csc-myCollectionSpace-conditioncheck-group",
             presentation: ".csc-myCollectionSpace-presentation-group",
             movement: ".csc-myCollectionSpace-movement-group",
+            valuationcontrol: ".csc-myCollectionSpace-valuationcontrol-group",
             objectexit: ".csc-myCollectionSpace-objectexit-group",
             media: ".csc-myCollectionSpace-media-group",
             group: ".csc-myCollectionSpace-group-group",

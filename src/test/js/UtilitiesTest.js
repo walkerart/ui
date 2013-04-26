@@ -328,6 +328,7 @@ var utilitiesTester = function ($) {
         "concept": ["create", "read", "update", "delete", "list"],
         "exhibition": ["create", "read", "update", "delete", "list"],
         "movement": ["create", "read", "update", "delete", "list"],
+        "valuationcontrol": ["create", "read", "update", "delete", "list"],
         "objectexit": ["create", "read", "update", "delete", "list"],
         "objects": ["create", "read", "update", "delete", "list"]
     };
@@ -525,6 +526,7 @@ var utilitiesTester = function ($) {
                 "exhibition",
                 "cataloging",
                 "movement",
+                "valuationcontrol",
                 "objectexit",
                 "media"
             ],
@@ -537,6 +539,7 @@ var utilitiesTester = function ($) {
                 "presentation",
                 "acquisition",
                 "movement",
+                "valuationcontrol",
                 "objectexit",
                 "media"
             ],
@@ -566,6 +569,7 @@ var utilitiesTester = function ($) {
                 "exhibition",
                 "cataloging",
                 "movement",
+                "valuationcontrol",
                 "objectexit",
                 "media"
             ],
@@ -578,6 +582,7 @@ var utilitiesTester = function ($) {
                 "presentation",
                 "acquisition",
                 "movement",
+                "valuationcontrol",
                 "objectexit",
                 "media"
             ],
@@ -608,6 +613,7 @@ var utilitiesTester = function ($) {
                 "exhibition",
                 "cataloging",
                 "movement",
+                "valuationcontrol",
                 "objectexit",
                 "media"
             ],
@@ -621,7 +627,8 @@ var utilitiesTester = function ($) {
                 "media",
                 "movement",
                 "objectexit",
-                "presentation"
+                "presentation",
+                "valuationcontrol"
             ],
             "vocabularies": [
                 "concept",
