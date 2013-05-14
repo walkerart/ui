@@ -108,7 +108,7 @@ media-remarksWACLabel: Remarks
 media-lastModifiedByWACLabel: Last modified by
 media-viewDepictedWACLabel: View depicted
 media-viewDescriptionWACLabel: View description
-media-publicallyAccessibleWACLabel: Publically accessible
+media-publiclyAccessibleWACLabel: Publicly accessible
 
 #Movement
 movement-onViewWACLabel: On view
