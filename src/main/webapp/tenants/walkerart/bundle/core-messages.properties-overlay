@@ -60,6 +60,7 @@ acquisition-acquisitionFundingSourceProvisosWACLabel: Source provisos
 
 #Person
 person-occupationsLabel: Role(s)
+person-occupationLabel: Role(s)
 person-updatedAtLabel: Last Updated
 preferredPA-termTypeLabel: Name Type
 person-groupsLabel: Group(s)
