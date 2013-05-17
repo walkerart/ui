@@ -17,8 +17,13 @@
                     "type": "cspace.titleBar",
                     "options": {
                         "fields": [
-                            "fields.conditionCheckRefNumber"
-                        ]
+                            "fields.conditionCheckRefNumber",{
+                            "type": "repeatableMatch",
+                            "queryPath": "fields.conditionCheckGroup",
+                            "childPath": "_primary",
+                            "value": true,
+                            "path": "condition"
+                        }]
                     }
                 },
                 "header": {
