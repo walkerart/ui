@@ -33,6 +33,10 @@
             },
             {
                 "permission": "read",
+                "resourceName": "presentation"
+            },
+            {
+                "permission": "read",
                 "resourceName": "movement"
             },
             {

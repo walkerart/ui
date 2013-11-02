@@ -1,0 +1,54 @@
+{
+    "pageBuilder": {
+        "options": {
+            "pageType": "presentation",
+            "components": {
+                "recordEditor": {
+                    "type":  "cspace.recordEditor",
+                    "options": {
+                        "selectors": {
+                            "identificationNumber": ".csc-presentation-presentationRefNumber"
+                        },
+                        "uispec": "{pageBuilder}.options.uispec.recordEditor",
+                        "fieldsToIgnore": ["csid", "fields.csid", "fields.presentationRefNumber", "fields.narrowerContexts"]
+                    }
+                },
+                "titleBar": {
+                    "type": "cspace.titleBar",
+                    "options": {
+                        "fields": [
+                            "fields.presentationRefNumber",
+                            "fields.exhibitionTitle",{
+                            "type": "repeatableMatch",
+                            "queryPath": "fields.updatedExhibitionVenueGroup",
+                            "childPath": "_primary",
+                            "value": true,
+                            "path": "updatedVenueName"
+                        }]
+                    }
+                },
+                "header": {
+                    "type": "cspace.header",
+                    "options": {
+                        "schema": "{pageBuilder}.schema",
+                        "permissions": "{pageBuilder}.permissions"
+                    }
+                },
+                "tabs": {
+                    "type": "cspace.tabs"
+                },
+                "sidebar": {
+                    "type": "cspace.sidebar"
+                }
+            }
+        }
+    },
+    "pageBuilderIO": {
+        "options": {
+            "recordType": "presentation",
+            "schema": {
+                "presentation": null
+            }
+        }
+    }
+}

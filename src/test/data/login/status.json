@@ -104,6 +104,13 @@
             "delete",
             "list"
         ],
+        "presentation": [
+            "create",
+            "read",
+            "update",
+            "delete",
+            "list"
+        ],
         "contact": [
             "create",
             "read",
