@@ -111,6 +111,13 @@
             "delete",
             "list"
         ],
+        "conditioncheck": [
+            "create",
+            "read",
+            "update",
+            "delete",
+            "list"
+        ],
         "contact": [
             "create",
             "read",

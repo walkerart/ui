@@ -37,6 +37,10 @@
             },
             {
                 "permission": "read",
+                "resourceName": "conditioncheck"
+            },
+            {
+                "permission": "read",
                 "resourceName": "movement"
             },
             {

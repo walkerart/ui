@@ -26,6 +26,7 @@
           "loanin", 
           "loanout", 
           "presentation", 
+          "conditioncheck", 
           "acquisition", 
           "movement", 
           "objectexit", 
