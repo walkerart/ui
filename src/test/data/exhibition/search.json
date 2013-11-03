@@ -1,0 +1,29 @@
+{
+    "results": [{
+        "shortIdentifier": "exhibitiontest1",
+        "summary": "descriptor",
+        "summarylist": {
+            "updatedAt": "2013-03-13T02:11:53Z",
+            "shortIdentifier": "Space Wars!",
+            "refName": "urn:cspace:core.collectionspace.org:exhibitionauthorities:name(exhibition):item:name(SpaceWars8673509000000)'Space Wars! (2013)'",
+            "csid": "e9294d70-8bf6-11e2-9e96",
+            "displayName": "Concept (Display Name)",
+            "uri": "/exhibitionauthorities/ef68ef60-8bfb-11e2-9e96/items/e9294d70-8bf6-11e2-9e96"
+        },
+        "csid": "8c7853a1-f1d3-4ae5-8511",
+        "number": "Concept (Display Name)",
+        "displayName": "Yves Klien: With the Void, Full Powers",
+        "refid": "urn:cspace:core.collectionspace.org:exhibitionauthorities:name(exhibition):item:name(YvesKlienWiththeVoidFullPowers8673509000000)'Yves Klien: With the Void, Full Powers'",
+        "recordtype": "exhibition"
+    }],
+    "pagination": {
+        "fieldsReturned": "csid|uri|updatedAt|termType|displayName|shortIdentifier|refName|termStatus",
+        "separatelists": [[]],
+        "totalItems": "1",
+        "pageSize": "30",
+        "traverser": "E41EBA34EC3D3BE59D97843ED7EC63CC",
+        "itemsInPage": "1",
+        "numInstances": "1",
+        "pageNum": "0"
+    }
+}

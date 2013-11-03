@@ -192,6 +192,24 @@ var utilitiesTester = function ($) {
                     },
                     "type": "object"
                 },
+                "exhibition": {
+                    "properties": {
+                        "exhibition": {
+                            "type": "object",
+                            "properties": {
+                                "nptAllowed": {
+                                    "type": "boolean",
+                                    "default": true
+                                },
+                                "order": {
+                                    "type": "number",
+                                    "default": 0
+                                }
+                            }
+                        }
+                    },
+                    "type": "object"
+                },
                 "organization": {
                     "properties": {
                         "organization": {
@@ -307,6 +325,7 @@ var utilitiesTester = function ($) {
         "organization": ["create", "read", "update", "delete", "list"],
         "place": ["create", "read", "update", "delete", "list"],
         "work": ["create", "read", "update", "delete", "list"],
+        "exhibition": ["create", "read", "update", "delete", "list"],
         "concept": ["create", "read", "update", "delete", "list"],
         "movement": ["create", "read", "update", "delete", "list"],
         "objectexit": ["create", "read", "update", "delete", "list"],
@@ -502,6 +521,7 @@ var utilitiesTester = function ($) {
                 "organization",
                 "place",
                 "work",
+                "exhibition",
                 "concept",
                 "cataloging",
                 "movement",
@@ -525,6 +545,7 @@ var utilitiesTester = function ($) {
                 "organization",
                 "place",
                 "work",
+                "exhibition",
                 "concept"
             ]
         }
@@ -541,6 +562,7 @@ var utilitiesTester = function ($) {
                 "organization",
                 "place",
                 "work",
+                "exhibition",
                 "concept",
                 "cataloging",
                 "movement",
@@ -564,6 +586,7 @@ var utilitiesTester = function ($) {
                 "organization",
                 "place",
                 "work",
+                "exhibition",
                 "concept"
             ]
         }
@@ -581,6 +604,7 @@ var utilitiesTester = function ($) {
                 "organization",
                 "place",
                 "work",
+                "exhibition",
                 "concept",
                 "cataloging",
                 "movement",
@@ -601,6 +625,7 @@ var utilitiesTester = function ($) {
             ],
             "vocabularies": [
                 "concept",
+                "exhibition",
                 "organization",
                 "person",
                 "place",
@@ -635,6 +660,7 @@ var utilitiesTester = function ($) {
             "concept": "concept",
             "place": "place",
             "work": "work",
+            "exhibition": "exhibition",
             "organization": "organization",
             "location": "location"
         }, vocab.authorities);
@@ -676,6 +702,10 @@ var utilitiesTester = function ($) {
         }));
         jqUnit.assertEquals("Resolve namespace", "work", cspace.vocab.resolve({
             recordType: "work",
+            vocab: vocab
+        }));
+        jqUnit.assertEquals("Resolve namespace", "exhibition", cspace.vocab.resolve({
+            recordType: "exhibition",
             vocab: vocab
         }));
         jqUnit.assertUndefined("Resolve namespace", cspace.vocab.resolve({

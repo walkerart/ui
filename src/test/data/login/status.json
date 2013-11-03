@@ -55,6 +55,13 @@
             "delete",
             "list"
         ],
+        "exhibition": [
+            "create",
+            "read",
+            "update",
+            "delete",
+            "list"
+        ],
         "group": [
             "create",
             "read",

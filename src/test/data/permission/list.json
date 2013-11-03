@@ -189,6 +189,20 @@
             "recordtype": "permission"
         },
         {
+            "summary": "exhibition",
+            "display": "show",
+            "csid": "a9500e00-8cc8-11e2-9e96-0800200c9a66",
+            "number": "CRUDL",
+            "recordtype": "permission"
+        },
+        {
+            "summary": "exhibitions",
+            "display": "none",
+            "csid": "b3a1cf10-8cc8-11e2-9e96-0800200c9a66",
+            "number": "CRUDL",
+            "recordtype": "permission"
+        },
+        {
             "summary": "taxonomyauthority",
             "display": "none",
             "csid": "5da94f43-5211-46ca-94fb-182e2131e5ee",

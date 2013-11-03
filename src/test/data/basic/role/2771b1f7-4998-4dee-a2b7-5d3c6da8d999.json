@@ -73,6 +73,10 @@
             },
             {
                 "permission": "delete",
+                "resourceName": "exhibition"
+            },
+            {
+                "permission": "delete",
                 "resourceName": "role"
             },
             {
@@ -106,6 +110,10 @@
             {
                 "permission": "delete",
                 "resourceName": "work"
+            },
+            {
+                "permission": "delete",
+                "resourceName": "exhibition"
             },
             {
                 "permission": "delete",
@@ -146,6 +154,10 @@
             {
                 "permission": "delete",
                 "resourceName": "works"
+            },
+            {
+                "permission": "delete",
+                "resourceName": "exhibitions"
             },
             {
                 "permission": "delete",

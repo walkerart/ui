@@ -73,6 +73,10 @@
             },
             {
                 "permission": "read",
+                "resourceName": "exhibition"
+            },
+            {
+                "permission": "read",
                 "resourceName": "role"
             },
             {
@@ -106,6 +110,10 @@
             {
                 "permission": "read",
                 "resourceName": "work"
+            },
+            {
+                "permission": "read",
+                "resourceName": "exhibition"
             },
             {
                 "permission": "read",
@@ -146,6 +154,10 @@
             {
                 "permission": "read",
                 "resourceName": "works"
+            },
+            {
+                "permission": "read",
+                "resourceName": "exhibitions"
             },
             {
                 "permission": "read",
