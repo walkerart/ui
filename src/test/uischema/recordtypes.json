@@ -25,6 +25,7 @@
         "default": [
           "loanin", 
           "loanout", 
+          "presentation", 
           "acquisition", 
           "movement", 
           "objectexit", 
