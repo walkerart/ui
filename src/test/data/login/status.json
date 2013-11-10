@@ -125,6 +125,13 @@
             "delete",
             "list"
         ],
+        "valuationcontrol": [
+            "create",
+            "read",
+            "update",
+            "delete",
+            "list"
+        ],
         "contact": [
             "create",
             "read",

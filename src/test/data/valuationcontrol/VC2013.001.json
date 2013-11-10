@@ -1,0 +1,24 @@
+{
+    "csid": "222-333-4444-5555",
+    "fields": {
+        "valuationcontrolRefNumber": "VC2013.001",
+        "valueCurrency": "usd",
+        "valueAmount": "1234.56",
+        "valueDate": "2011-01-01",
+        "valueSource": "value source goes here",
+        "valueType": "appraised",
+        "valueNote": "value note goes here"
+    },
+    "relations": {
+        "cataloging": [
+            {
+                "summary": "Souvenir books. Molly O' Play Book.",
+                "csid": "2005.018.1383",
+                "number": "2005.018.1383",
+                "relid": "e8d20612-e1f5-4e90-bc36",
+                "relationshiptype": "affects",
+                "recordtype": "cataloging"
+            }
+        ]
+    }
+}
