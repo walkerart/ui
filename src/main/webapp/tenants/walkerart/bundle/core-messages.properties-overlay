@@ -110,6 +110,10 @@ media-viewDepictedWACLabel: View depicted
 media-viewDescriptionWACLabel: View description
 media-publiclyAccessibleWACLabel: Publicly accessible
 
+#intake
+intake-entryMethodsLabel: Carrier
+intake-entryMethodLabel: Carrier
+
 #Movement
 movement-onViewWACLabel: On view
 movement-onViewLocationWACLabel: On view location
