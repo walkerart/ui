@@ -234,6 +234,156 @@
 </div> <!-- information-group -->
 
 <div class="fl-container-flex fl-fix information-group">
+    <div class="csc-recordEditor-header fl-container-flex header toggle csc-collection-object-objectProductionInformation-label"></div>
+    <div class="csc-recordEditor-togglable fl-container-flex fl-fix content main">
+        <div class="info-column">
+            <div class="info-column2-50 fl-force-left">
+                <div class="info-pair">
+                    <div class="header">
+                        <div class="label csc-collection-object-objectProductionDateGroup-label"></div>
+                    </div>
+                    <div class="content">
+                        <input type="text" class="csc-objectProductionDateGroup-objectProductionDate" />
+                    </div>
+                </div>
+
+                <div class="info-pair">
+                    <div class="header">
+                        <div class="label csc-collection-object-techniqueGroup-label"></div>
+                    </div>
+                    <div class="content">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td class="csc-collection-object-technique-label"></td>
+                                    <td class="csc-collection-object-techniqueType-label"></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="csc-collection-object-techniqueGroup">
+                                    <td><input type="text" class="csc-object-production-technique"/></td>
+                                    <td><input type="text" class="csc-object-production-technique-type input-select"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="info-pair">
+                    <div class="header">
+                        <div class="label csc-collection-object-objectProductionPlaceGroup-label"></div>
+                    </div>
+                    <div class="content">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td class="csc-collection-object-objectProductionPlace-label"></td>
+                                    <td class="csc-collection-object-objectProductionPlaceRole-label"></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="csc-collection-object-objectProductionPlaceGroup">
+                                    <td><input type="text" class="csc-object-production-place"/></td>
+                                    <td><input type="text" class="csc-collection-object-objectProductionPlaceRole"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!--div class="info-pair">
+                    <div class="header">
+                        <div class="label csc-collection-object-objectProductionReasons-label"></div>
+                    </div>
+                    <div class="content">
+                        <textarea rows="4" cols="30" class="input-textarea csc-object-production-reason"></textarea>
+                    </div>
+                </div-->
+            </div>
+            
+            <div class="info-column2-50 fl-force-right">
+                <div class="info-pair">
+                    <div class="header">
+                        <div class="label csc-collection-object-objectProductionPeopleGroup-label"></div>
+                    </div>
+                    <div class="content">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td class="csc-collection-object-objectProductionPeople-label"></td>
+                                    <td class="csc-collection-object-objectProductionPeopleRole-label"></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="csc-collection-object-objectProductionPeopleGroup">
+                                    <td><input type="text" class="csc-object-production-people"/></td>
+                                    <td><input type="text" class="csc-collection-object-objectProductionPeopleRole"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="info-pair">
+                    <div class="header">
+                        <div class="label csc-collection-object-objectProductionPersonGroup-label"></div>
+                    </div>
+                    <div class="content">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td class="csc-collection-object-objectProductionPerson-label"></td>
+                                    <td class="csc-collection-object-objectProductionPersonRole-label"></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="csc-collection-object-objectProductionPersonGroup">
+                                    <td><input type="text" class="csc-object-production-person"/></td>
+                                    <td><input type="text" class="csc-collection-object-objectProductionPersonRole"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="info-pair">
+                    <div class="header">
+                        <div class="label csc-collection-object-objectProductionOrganizationGroup-label"></div>
+                    </div>
+                    <div class="content">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td class="csc-collection-object-objectProductionOrganization-label"></td>
+                                    <td class="csc-collection-object-objectProductionOrganizationRole-label"></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="csc-collection-object-objectProductionOrganizationGroup">
+                                    <td><input type="text" class="csc-object-production-organization"/></td>
+                                    <td><input type="text" class="csc-collection-object-objectProductionOrganizationRole"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="info-column">
+                    <div class="info-pair">
+                        <div class="header">
+                            <div class="label csc-collection-object-objectProductionNote-label"></div>
+                        </div>
+                        <div class="content">
+                            <textarea rows="4" cols="30" class="input-textarea csc-object-production-note"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>         
+    </div>
+</div> <!-- information-group -->
+
+<div class="fl-container-flex fl-fix information-group">
     <div class="csc-recordEditor-header fl-container-flex header toggle csc-collection-object-descriptionInformation-label"></div>
     <div class="csc-recordEditor-togglable fl-container-flex fl-fix content main">
         <div class="csc-collection-object-dimension cs-multipleEdit"></div>
@@ -818,156 +968,6 @@
                 </div>
             </div>
         </div--> <!-- / infogroup -->
-    </div>
-</div> <!-- information-group -->
-    
-<div class="fl-container-flex fl-fix information-group">
-    <div class="csc-recordEditor-header fl-container-flex header toggle csc-collection-object-objectProductionInformation-label"></div>
-    <div class="csc-recordEditor-togglable fl-container-flex fl-fix content main">
-        <div class="info-column">
-            <div class="info-column2-50 fl-force-left">
-                <div class="info-pair">
-                    <div class="header">
-                        <div class="label csc-collection-object-objectProductionDateGroup-label"></div>
-                    </div>
-                    <div class="content">
-                        <input type="text" class="csc-objectProductionDateGroup-objectProductionDate" />
-                    </div>
-                </div>
-
-                <div class="info-pair">
-                    <div class="header">
-                        <div class="label csc-collection-object-techniqueGroup-label"></div>
-                    </div>
-                    <div class="content">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <td class="csc-collection-object-technique-label"></td>
-                                    <td class="csc-collection-object-techniqueType-label"></td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="csc-collection-object-techniqueGroup">
-                                    <td><input type="text" class="csc-object-production-technique"/></td>
-                                    <td><input type="text" class="csc-object-production-technique-type input-select"/></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <div class="info-pair">
-                    <div class="header">
-                        <div class="label csc-collection-object-objectProductionPlaceGroup-label"></div>
-                    </div>
-                    <div class="content">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <td class="csc-collection-object-objectProductionPlace-label"></td>
-                                    <td class="csc-collection-object-objectProductionPlaceRole-label"></td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="csc-collection-object-objectProductionPlaceGroup">
-                                    <td><input type="text" class="csc-object-production-place"/></td>
-                                    <td><input type="text" class="csc-collection-object-objectProductionPlaceRole"/></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <!--div class="info-pair">
-                    <div class="header">
-                        <div class="label csc-collection-object-objectProductionReasons-label"></div>
-                    </div>
-                    <div class="content">
-                        <textarea rows="4" cols="30" class="input-textarea csc-object-production-reason"></textarea>
-                    </div>
-                </div-->
-            </div>
-            
-            <div class="info-column2-50 fl-force-right">
-                <div class="info-pair">
-                    <div class="header">
-                        <div class="label csc-collection-object-objectProductionPeopleGroup-label"></div>
-                    </div>
-                    <div class="content">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <td class="csc-collection-object-objectProductionPeople-label"></td>
-                                    <td class="csc-collection-object-objectProductionPeopleRole-label"></td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="csc-collection-object-objectProductionPeopleGroup">
-                                    <td><input type="text" class="csc-object-production-people"/></td>
-                                    <td><input type="text" class="csc-collection-object-objectProductionPeopleRole"/></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <div class="info-pair">
-                    <div class="header">
-                        <div class="label csc-collection-object-objectProductionPersonGroup-label"></div>
-                    </div>
-                    <div class="content">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <td class="csc-collection-object-objectProductionPerson-label"></td>
-                                    <td class="csc-collection-object-objectProductionPersonRole-label"></td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="csc-collection-object-objectProductionPersonGroup">
-                                    <td><input type="text" class="csc-object-production-person"/></td>
-                                    <td><input type="text" class="csc-collection-object-objectProductionPersonRole"/></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <div class="info-pair">
-                    <div class="header">
-                        <div class="label csc-collection-object-objectProductionOrganizationGroup-label"></div>
-                    </div>
-                    <div class="content">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <td class="csc-collection-object-objectProductionOrganization-label"></td>
-                                    <td class="csc-collection-object-objectProductionOrganizationRole-label"></td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="csc-collection-object-objectProductionOrganizationGroup">
-                                    <td><input type="text" class="csc-object-production-organization"/></td>
-                                    <td><input type="text" class="csc-collection-object-objectProductionOrganizationRole"/></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <div class="info-column">
-                    <div class="info-pair">
-                        <div class="header">
-                            <div class="label csc-collection-object-objectProductionNote-label"></div>
-                        </div>
-                        <div class="content">
-                            <textarea rows="4" cols="30" class="input-textarea csc-object-production-note"></textarea>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>         
     </div>
 </div> <!-- information-group -->
     
