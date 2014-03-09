@@ -223,12 +223,12 @@ cspace = cspace || {};
                                         name: "title"
                                     }, {
                                         sortable: true,
-                                        id: "summarylist.updatedAt",
-                                        name: "updatedAt"
-                                    }, {
-                                        sortable: true,
                                         id: "recordtype",
                                         name: "recordType"
+                                    }, {
+                                        sortable: true,
+                                        id: "summarylist.updatedAt",
+                                        name: "updatedAt"
                                     }]
                                 }
                             }
