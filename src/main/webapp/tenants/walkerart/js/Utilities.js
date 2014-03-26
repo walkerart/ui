@@ -2069,7 +2069,7 @@ fluid.registerNamespace("cspace.util");
     cspace.util.dimensionsPrefill = function (container, options) {
         var that = fluid.initView("cspace.util.dimensionsPrefill", container, options);
 
-        if (that.options.args["patterns"].length != 0){
+        if (that.options.args["patterns"].length != 0) {
 
             // link it to the templates listed in the patterns list
             var ptn = that.options.args["patterns"][0];
@@ -2077,21 +2077,23 @@ fluid.registerNamespace("cspace.util");
                 ptn = ptn +  "|" + that.options.args["patterns"][i];
             }
 
-            // HACK need a better way to know if the record was just saved.
-            // Maybe one day check time stamp when implemented in GUI
-            var isNewRecord = ($(".csc-object-identification-object-number").val().length == 0) ? 1 : 0;
+            if (container.context.baseURI.match(new RegExp(ptn,"i")) != null) {
+                // HACK need a better way to know if the record was just saved.
+                // Maybe one day check time stamp when implemented in GUI
+                var isNewRecord = ($(".csc-object-identification-object-number").val().length == 0) ? 1 : 0;
 
-            if (container.context.baseURI.match(new RegExp(ptn,"i")) != null && isNewRecord) {
-                // trigger the click event that'll repeat the entire dimension group
-                //$(".csc-collection-object-dimension input.cs-repeatable-add:eq(0)").trigger("click");
-                for (var i=1; i < that.options.args["dimValues"].length; i++) { // start i at 1 since there is already one iteration by default
-                    that.locate("dimAddButton").eq(0).trigger("click");
-                }
+                if (isNewRecord) {
+                    // trigger the click event that'll repeat the entire dimension group
+                    //$(".csc-collection-object-dimension input.cs-repeatable-add:eq(0)").trigger("click");
+                    for (var i=1; i < that.options.args["dimValues"].length; i++) { // start i at 1 since there is already one iteration by default
+                        that.locate("dimAddButton").eq(0).trigger("click");
+                    }
 
-                // set values
-                //$(".csc-collection-object-dimension li.cs-repeatable-repeat:eq(0) .csc-dimension-dimension").val("height");
-                for (var i=0; i < that.options.args["dimValues"].length; i++) {
-                    that.locate("dimFieldOption").eq(i).val(that.options.args["dimValues"][i]).prop("selected", true).change();
+                    // set values
+                    //$(".csc-collection-object-dimension li.cs-repeatable-repeat:eq(0) .csc-dimension-dimension").val("height");
+                    for (var i=0; i < that.options.args["dimValues"].length; i++) {
+                        that.locate("dimFieldOption").eq(i).val(that.options.args["dimValues"][i]).prop("selected", true).change();
+                    }
                 }
             }
         }
