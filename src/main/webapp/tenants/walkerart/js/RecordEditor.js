@@ -39,7 +39,9 @@ cspace = cspace || {};
             header: ".csc-recordEditor-header",
             togglable: ".csc-recordEditor-togglable",
             toggler: ".csc-presentation-overrideExhibitionVenues",
-            toggled: ".csc-presentation-updatedExhibitionVenueGroup-toggle"
+            toggled: ".csc-presentation-updatedExhibitionVenueGroup-toggle",
+            dimAddButton: ".csc-collection-object-dimension input.cs-repeatable-add",
+            dimFieldOption: ".csc-collection-object-dimension li.cs-repeatable-repeat .csc-dimension-dimension"
         },
         // Render control panel (a collection of control buttons above and
         // below the record editing area.
@@ -171,6 +173,17 @@ cspace = cspace || {};
                     selectors: {
                         toggler: "{cspace.recordEditor}.options.selectors.toggler",
                         toggled: "{cspace.recordEditor}.options.selectors.toggled"
+                    }
+                },
+                createOnEvent: "afterRecordRender"
+            },
+            // WAC Cataloging Dimensions group pre-fill
+            dimensionGroupPrefill: {
+                type: "cspace.util.dimensionsPrefill",
+                options: {
+                    selectors: {
+                        dimAddButton: "{cspace.recordEditor}.options.selectors.dimAddButton",
+                        dimFieldOption: "{cspace.recordEditor}.options.selectors.dimFieldOption"
                     }
                 },
                 createOnEvent: "afterRecordRender"

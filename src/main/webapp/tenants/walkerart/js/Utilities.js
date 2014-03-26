@@ -2054,4 +2054,49 @@ fluid.registerNamespace("cspace.util");
         return that;
     };
 
+    // WAC Cataloging Dimensions group pre-fill
+    fluid.defaults("cspace.util.dimensionsPrefill", {
+        gradeNames: ["fluid.viewComponent"],
+        selectors: {
+            dimAddButton: ".csc-collection-object-dimension input.cs-repeatable-add",
+            dimFieldOption: ".csc-collection-object-dimension li.cs-repeatable-repeat .csc-dimension-dimension"
+        },
+        args: {
+            "dimValues":["height","width","depth"],
+            "patterns": ["template=photograph","template=inventory"]
+        }
+    });
+    cspace.util.dimensionsPrefill = function (container, options) {
+        var that = fluid.initView("cspace.util.dimensionsPrefill", container, options);
+
+        if (that.options.args["patterns"].length != 0){
+
+            // link it to the templates listed in the patterns list
+            var ptn = that.options.args["patterns"][0];
+            for (var i=1; i < that.options.args["patterns"].length; i++){
+                ptn = ptn +  "|" + that.options.args["patterns"][i];
+            }
+
+            // HACK need a better way to know if the record was just saved.
+            // Maybe one day check time stamp when implemented in GUI
+            var hasReqFieldValue = ($(".csc-object-identification-object-number").val().length == 0) ? 0 : 1;
+
+            if (container.context.baseURI.match(new RegExp(ptn,"i")) != null && hasReqFieldValue) {
+                // trigger the click event that'll repeat the entire dimension group
+                //$(".csc-collection-object-dimension input.cs-repeatable-add:eq(0)").trigger("click");
+                for (var i=1; i < that.options.args["dimValues"].length; i++) { // start i at 1 since there is already one iteration by default
+                    that.locate("dimAddButton").eq(0).trigger("click");
+                }
+
+                // set values
+                //$(".csc-collection-object-dimension li.cs-repeatable-repeat:eq(0) .csc-dimension-dimension").val("height");
+                for (var i=0; i < that.options.args["dimValues"].length; i++) {
+                    that.locate("dimFieldOption").eq(i).val(that.options.args["dimValues"][i]).prop("selected", true).change();
+                }
+            }
+        }
+
+        return that;
+    };
+
 })(jQuery, fluid);

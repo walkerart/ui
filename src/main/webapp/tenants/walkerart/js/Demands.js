@@ -1101,6 +1101,10 @@ https://source.collectionspace.org/collection-space/LICENSE.txt
         fluid.demands("togglePresentationFields", "cspace.recordEditor", {
             container: "{recordEditor}.container"
         });
+        // WAC Cataloging Dimension field pre-fill demands
+        fluid.demands("dimensionGroupPrefill", "cspace.recordEditor", {
+            container: "{recordEditor}.container"
+        });
         fluid.demands("togglable", "cspace.relatedRecordsTab", {
             container: "{relatedRecordsTab}.container"
         });
