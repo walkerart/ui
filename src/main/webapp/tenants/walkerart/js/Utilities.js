@@ -2079,9 +2079,9 @@ fluid.registerNamespace("cspace.util");
 
             // HACK need a better way to know if the record was just saved.
             // Maybe one day check time stamp when implemented in GUI
-            var hasReqFieldValue = ($(".csc-object-identification-object-number").val().length == 0) ? 0 : 1;
+            var isNewRecord = ($(".csc-object-identification-object-number").val().length == 0) ? 1 : 0;
 
-            if (container.context.baseURI.match(new RegExp(ptn,"i")) != null && hasReqFieldValue) {
+            if (container.context.baseURI.match(new RegExp(ptn,"i")) != null && isNewRecord) {
                 // trigger the click event that'll repeat the entire dimension group
                 //$(".csc-collection-object-dimension input.cs-repeatable-add:eq(0)").trigger("click");
                 for (var i=1; i < that.options.args["dimValues"].length; i++) { // start i at 1 since there is already one iteration by default
