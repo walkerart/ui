@@ -41,7 +41,11 @@ cspace = cspace || {};
             toggler: ".csc-presentation-overrideExhibitionVenues",
             toggled: ".csc-presentation-updatedExhibitionVenueGroup-toggle",
             dimAddButton: ".csc-collection-object-dimension input.cs-repeatable-add",
-            dimFieldOption: ".csc-collection-object-dimension li.cs-repeatable-repeat .csc-dimension-dimension"
+            dimFieldOption: ".csc-collection-object-dimension li.cs-repeatable-repeat .csc-dimension-dimension",
+            dimConvertButton: ".csc-dimension-convert",
+            dimConvertParent: ".csc-measuredPartGroup-dimensionSubGroup",
+            dimConvertUnit: ".csc-dimension-measurementUnit",
+            dimConvertValue: ".csc-dimension-value"
         },
         // Render control panel (a collection of control buttons above and
         // below the record editing area.
@@ -184,6 +188,19 @@ cspace = cspace || {};
                     selectors: {
                         dimAddButton: "{cspace.recordEditor}.options.selectors.dimAddButton",
                         dimFieldOption: "{cspace.recordEditor}.options.selectors.dimFieldOption"
+                    }
+                },
+                createOnEvent: "afterRecordRender"
+            },
+            // WAC Cataloging Dimensions cm to in converter
+            dimensionValueConvert: {
+                type: "cspace.util.dimensionConvert",
+                options: {
+                    selectors: {
+                        dimConvertButton: "{cspace.recordEditor}.options.selectors.dimConvertButton",
+                        dimConvertParent: "{cspace.recordEditor}.options.selectors.dimConvertParent",
+                        dimConvertUnitField: "{cspace.recordEditor}.options.selectors.dimConvertUnitField",
+                        dimConvertValue: "{cspace.recordEditor}.options.selectors.dimConvertValue",
                     }
                 },
                 createOnEvent: "afterRecordRender"

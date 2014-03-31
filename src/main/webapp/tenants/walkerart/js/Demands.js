@@ -1105,6 +1105,10 @@ https://source.collectionspace.org/collection-space/LICENSE.txt
         fluid.demands("dimensionGroupPrefill", "cspace.recordEditor", {
             container: "{recordEditor}.container"
         });
+        // WAC Cataloging Dimension cm to in converter demands
+        fluid.demands("dimensionValueConvert", "cspace.recordEditor", {
+            container: "{recordEditor}.container"
+        });
         fluid.demands("togglable", "cspace.relatedRecordsTab", {
             container: "{relatedRecordsTab}.container"
         });
