@@ -91,6 +91,7 @@ cspace = cspace || {};
 
     // Generic hierarchy produce tree.
     cspace.hierarchy.produceTree = function (that) {
+        //alert(cspace.util.urnToString(that.model.fields.narrowerContexts[0].narrowerContext));
         return cspace.hierarchy.treeUispecMerge({
             header: {
                 messagekey: "hierarchy-header"
@@ -217,6 +218,39 @@ cspace = cspace || {};
             that.template = resourceText;
             that.refreshView();
         };
+
+        
+        // WAC custom sort function for narrowerContexts
+        function compareNC(a,b) {
+            var sortNameA = cspace.util.urnToString(a.narrowerContext);
+            var sortNameB = cspace.util.urnToString(b.narrowerContext);
+            if (sortNameA < sortNameB)
+                return -1;
+            if (sortNameA > sortNameB)
+                return 1;
+            return 0;
+        }
+
+        // WAC custom sort function for equivalentContexts
+        function compareEC(a,b) {
+            var sortNameA = cspace.util.urnToString(a.equivalentContext);
+            var sortNameB = cspace.util.urnToString(b.equivalentContext);
+            if (sortNameA < sortNameB)
+                return -1;
+            if (sortNameA > sortNameB)
+                return 1;
+            return 0;
+        }
+
+        // WAC alphabetically sort narrowContext array
+        if (that.model.fields.narrowerContexts.length > 1) {
+            that.model.fields.narrowerContexts.sort(compareNC);
+        }
+
+        // WAC alphabetically sort equivalentContext array
+        if (that.model.fields.equivalentContexts.length > 1) {
+            that.model.fields.equivalentContexts.sort(compareEC);
+        }
     };
     
     cspace.hierarchy.cutpointGenerator = function (selectors, options) {
