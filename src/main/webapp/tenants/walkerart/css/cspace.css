@@ -2577,3 +2577,15 @@ input[type="button"].csc-dimension-convert {
     padding-top:0;
     padding-bottom:0;
 }
+
+/* hide radio buttons from hierarchy groups */
+.cs-hierarchy .cs-fixedExternalURL li.cs-repeatable-repeat input.cs-repeatable-primary {
+    display:none;
+}
+
+/* hide radio buttons from Term list details */
+#administration tbody tr.csc-termlist-terms td:first-child,
+#administration thead tr td.csc-termlistitem-displayName-label:first-child {
+    display:none;
+}
+
