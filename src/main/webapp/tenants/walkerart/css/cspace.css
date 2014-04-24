@@ -2589,3 +2589,8 @@ input[type="button"].csc-dimension-convert {
     display:none;
 }
 
+/* remove the expanded height of the calendar icon from within a repeatable group */
+td.fl-date-group .cs-calendar-button {
+    height:inherit;
+}
+
