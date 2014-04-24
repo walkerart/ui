@@ -122,7 +122,8 @@ movement-onViewLocationWACLabel: On view location
 location-onViewLabel: On View
 
 #dimension
-dimension-convertLabel:
+dimension-valueConvertedInchLabel: Value
+dimension-valueConvertedCMLabel: Value (cm)
 
 #Variable Media domain extension
 collection-object-filmAndVideoComponentsInformationLabel: Film and Video Components Information

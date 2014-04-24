@@ -2105,10 +2105,10 @@ fluid.registerNamespace("cspace.util");
     fluid.defaults("cspace.util.dimensionConvert", {
         gradeNames: ["fluid.viewComponent"],
         selectors: {
-            dimConvertButton: ".csc-dimension-convert",
             dimConvertParent: ".csc-measuredPartGroup-dimensionSubGroup",
             dimConvertUnit: ".csc-dimension-measurementUnit",
-            dimConvertValue: ".csc-dimension-value"
+            dimConvertValue: ".csc-dimension-valueConvertedInch",
+            dimConvertValueCM: ".csc-dimension-valueConvertedCM"
         }
     });
     cspace.util.dimensionConvert = function (container, options) {
@@ -2140,61 +2140,49 @@ fluid.registerNamespace("cspace.util");
             return convertedDecimal;
         }
 
-        // TODO see if there's a smarter way of combining the each iterator and change event handler
-        //
-        // initialize enabled state of each dimension convert button based on value of dimension unit
-        that.locate("dimConvertUnit").each(function(){
-            var myVal = $(this).val();
-            var dimButton = $(this).closest(dimSelectors.dimConvertParent).find(dimSelectors.dimConvertButton);
-            // add the text to the dimension button
-            // \u2192 is same as utf8 →
-            dimButton.val('cm \u2192 in');
-            
-            if (myVal == "centimeters" || myVal == ""){
-                dimButton.removeAttr("disabled");
-            } else {
-                dimButton.attr("disabled", "disabled");
-            }
-        });
+        function updateConvertValueCM(dimUnitObj,dimValueObj,dimValueCMObj){
+            var dimUnit  = dimUnitObj.val();
+            var dimValue = dimValueObj.val();
 
+            // only convert if unit is "inches"
+            // AND there is a value entered
+            // AND that value matches the regular expression set
+            if ((dimUnit == "inches") && dimValue && pattern.test(dimValue)){
+                // convert inches with fractions into a decimal value
+                var inchDecValue = getDecimalValue(dimValue);
 
-        // enable convert button based on dimension unit value's change
-        that.locate("dimConvertUnit").change(function(){
-            var myVal = $(this).val();
-            var dimButton = $(this).closest(dimSelectors.dimConvertParent).find(dimSelectors.dimConvertButton);
-            
-            if (myVal == "centimeters" || myVal == ""){
-                dimButton.removeAttr("disabled");
-            } else {
-                dimButton.attr("disabled", "disabled");
-            }
-        });
-
-        // check if conversion is possible and if so update the dimension unit and value fields
-        that.locate("dimConvertButton").click(function() {
-            // get the current value of Dimension Value
-            var dimValue = $(this).closest(dimSelectors.dimConvertParent).find(dimSelectors.dimConvertValue).val();
-
-            var dimUnit = $(this).closest(dimSelectors.dimConvertParent).find(dimSelectors.dimConvertUnit).val();
-
-            // is the Dimension Unit either unselected or set to "centimeters"
-            // AND does this value exist AND does it match the regex pattern?
-            if ((dimUnit == "centimeters" || dimUnit == "") && dimValue && pattern.test(dimValue)){
-
-                var cmValue = Math.round((getDecimalValue(dimValue)/2.54)*100)/100;
+                // convert inches into centimeters
+                var cmValue = Math.round((inchDecValue*2.54)*100)/100;
 
                 // change value of Dimension Value field
-                $(this).closest(dimSelectors.dimConvertParent).find(dimSelectors.dimConvertValue).val(cmValue).change();
-
-                // change units to inches
-                $(this).closest(dimSelectors.dimConvertParent).find(dimSelectors.dimConvertUnit)
-                    .val("inches")
-                    .prop("selected", true)
-                    .change();
+                dimValueCMObj.val(cmValue).change();
             } else {
-                // Fluid doesn't allow for .animate() effects otherwise there'd be an animation to flash the value field
-                // a different color, or something similar
+                // remove the converted value if the conditions aren't met
+                dimValueCMObj.val("").change();
             }
+        }
+
+        // disable every dimConvertValueCM field
+        that.locate("dimConvertValueCM").each(function(){
+            $(this).attr("disabled", "disabled");
+        });
+        
+        // trigger when unit field changes
+        that.locate("dimConvertUnit").change(function(){
+            var dimUnit    = $(this);
+            var dimValue   = $(this).closest(dimSelectors.dimConvertParent).find(dimSelectors.dimConvertValue);
+            var dimValueCM = $(this).closest(dimSelectors.dimConvertParent).find(dimSelectors.dimConvertValueCM);
+
+            updateConvertValueCM(dimUnit,dimValue,dimValueCM);
+        });
+
+        // trigger when value field changes
+        that.locate("dimConvertValue").change(function() {
+            var dimValue   = $(this);
+            var dimUnit    = $(this).closest(dimSelectors.dimConvertParent).find(dimSelectors.dimConvertUnit);
+            var dimValueCM = $(this).closest(dimSelectors.dimConvertParent).find(dimSelectors.dimConvertValueCM);
+
+            updateConvertValueCM(dimUnit,dimValue,dimValueCM);
         });
 
         return that;
