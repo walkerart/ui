@@ -18,13 +18,8 @@
                     "options": {
                         "fields": [
                             "fields.presentationRefNumber",
-                            "fields.exhibitionTitle",{
-                            "type": "repeatableMatch",
-                            "queryPath": "fields.updatedExhibitionVenueGroup",
-                            "childPath": "_primary",
-                            "value": true,
-                            "path": "updatedVenueName"
-                        }]
+                            "fields.presentationType"
+                        ]
                     }
                 },
                 "header": {
