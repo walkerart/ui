@@ -1109,6 +1109,10 @@ https://source.collectionspace.org/collection-space/LICENSE.txt
         fluid.demands("dimensionValueConvert", "cspace.recordEditor", {
             container: "{recordEditor}.container"
         });
+        // WAC Get the calculated reference storage location record
+        fluid.demands("getCalculatedStorageLocation", "cspace.recordEditor", {
+            container: "{recordEditor}.container"
+        });
         fluid.demands("togglable", "cspace.relatedRecordsTab", {
             container: "{relatedRecordsTab}.container"
         });

@@ -2188,4 +2188,61 @@ fluid.registerNamespace("cspace.util");
         return that;
     };
 
+    // WAC Get the calculated reference storage location record
+    fluid.defaults("cspace.util.getCalculatedStorageLoc", {
+        gradeNames: ["fluid.viewComponent"],
+        selectors: {
+            computedOnView: ".csc-movement-computedOnView",
+            currentLocation: ".csc-movement-currentLocation",
+            appURL: "../../../tenant/walkerart/vocabularies/basic/location/urn:cspace:name",
+            fieldName: "onView"
+        }
+    });
+    cspace.util.getCalculatedStorageLoc = function(container, options) {
+        var that = fluid.initView("cspace.util.getCalculatedStorageLoc", container, options);
+
+        // check to see if the currentLocation field exists
+        // AND is present
+        // AND has a non-null value,
+        // which indicates the record has been saved
+        var curLocURN = that.locate("currentLocation");
+        if (curLocURN && curLocURN.length && curLocURN.val().length > 0) {
+
+            // example URN value for curLocURN
+            // "urn:cspace:walkerart.org:locationauthorities:name(location) \
+            // :item:name(Shelf4B)'Shelf 4B'";
+
+            // regex pattern to match the authority item name including surrounding ()
+            var regexStr = /^.*:item:name(.*)\'.*\'$/;
+            var curLocExec = regexStr.exec(curLocURN.val());
+            // curLocExec returns an array with the first index containing the string it matches
+            // then additional indexes containing parenthesized substring matches
+            var curLocName = curLocExec[1]; // (Shelf4B)
+
+            // compose the app layer URL that will give us the field values of the onView field
+            var url = that.options.selectors.appURL + curLocName;
+
+            // find computedOnView element AND make sure it exists.
+            // we assume there is only one instance of computedOnView
+            var computedOnViewElem = that.locate("computedOnView");
+            if (computedOnViewElem && computedOnViewElem.length > 0) {
+                $.get(url, function(data){
+                    console.log("cspace.util.getCalculatedStorageLoc: retrieved referenced location authority record: " + curLocName);
+                    var onViewValue = data.fields[that.options.selectors.fieldName];
+
+                    // check that the field was located
+                    // AND that the value of the field is a boolean true.
+                    // if so, make checkbox marked
+                    if (onViewValue && onViewValue == true) {
+                        computedOnViewElem.prop('checked', true);
+                    }
+                }).fail(function() {
+                    console.log("cspace.util.getCalculatedStorageLoc: could not retrieve referenced location authority record: " + curLocName);
+                });
+            }
+        }
+
+        return that;
+    };
+
 })(jQuery, fluid);

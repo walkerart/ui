@@ -205,6 +205,19 @@ cspace = cspace || {};
                 },
                 createOnEvent: "afterRecordRender"
             },
+            // WAC Get the calculated reference storage location record
+            getCalculatedStorageLocation: {
+                type: "cspace.util.getCalculatedStorageLoc",
+                options: {
+                    selectors: {
+                        computedOnView: "{cspace.recordEditor}.options.selectors.computedOnView",
+                        currentLocation: "{cspace.recordEditor}.options.selectors.currentLocation",
+                        appURL: "{cspace.recordEditor}.options.selectors.appURL",
+                        fieldName: "{cspace.recordEditor}.options.selectors.fieldName"
+                    }
+                },
+                createOnEvent: "afterRecordRender"
+            },
             // Component that applies read only styling for all of record
             // editor.
             readOnly: {

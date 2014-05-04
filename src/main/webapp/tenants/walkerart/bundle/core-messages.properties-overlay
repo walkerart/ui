@@ -115,8 +115,8 @@ intake-entryMethodsLabel: Carrier
 intake-entryMethodLabel: Carrier
 
 #Movement
-movement-onViewWACLabel: On view
-movement-onViewLocationWACLabel: On view location
+movement-onViewWACLabel: On view (overridden)
+movement-computedOnViewLabel: On view (calculated)
 
 #location
 location-onViewLabel: On View
