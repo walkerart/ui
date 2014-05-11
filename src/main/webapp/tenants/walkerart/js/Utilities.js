@@ -2034,8 +2034,8 @@ fluid.registerNamespace("cspace.util");
     fluid.defaults("cspace.util.presentationToggle", {
         gradeNames: ["fluid.viewComponent"],
         selectors: {
-            toggler: ".csc-presentation-overrideExhibitionVenues",
-            toggled: ".csc-presentation-updatedExhibitionVenueGroup-toggle"
+            toggler: ".csc-presentation-overrideExhibitionVenue",
+            toggled: ".csc-presentation-overridenExhibitionVenueGroup-toggle"
         }
     });
     cspace.util.presentationToggle = function (container, options) {
@@ -2240,6 +2240,157 @@ fluid.registerNamespace("cspace.util");
                     console.log("cspace.util.getCalculatedStorageLoc: could not retrieve referenced location authority record: " + curLocName);
                 });
             }
+        }
+
+        return that;
+    };
+
+    // WAC Get the calculated reference storage location record
+    fluid.defaults("cspace.util.getCalculatedExhibitionTitle", {
+        gradeNames: ["fluid.viewComponent"],
+        selectors: {
+            calculatedSelectorPrefix: ".csc-presentation-calculated",
+            overriddenSelectorPrefix: ".csc-presentation-overridden",
+            triggerAuthSelector: ".csc-presentation-exhibitionTitle",
+            siblingInputSelector: ".cs-autocomplete-input"
+        },
+        args: {
+            appURL: "../../../tenant/walkerart/vocabularies/basic/exhibition/urn:cspace:name",
+            groupName: "exhibitionVenueGroup",
+            fields: [
+                "venueName",
+                "venueStartDate",
+                "venueEndDate",
+                "venueAttendance"
+            ]
+        },
+        buttons: {
+            copyCalculatedValues: ".csc-copyCalculatedValues",
+            clearOverriddenValues: ".csc-clearOverriddenValues"
+        }
+    });
+    cspace.util.getCalculatedExhibitionTitle = function(container, options) {
+        var that = fluid.initView("cspace.util.getCalculatedExhibitionTitle", container, options);
+
+        // check to see if the triggerAuthSelector field exists
+        // AND has a non-null value,
+        // which indicates the record has been saved
+        var triggerAuthSel = that.locate("triggerAuthSelector");
+        if (triggerAuthSel && triggerAuthSel.val().length > 0) {
+            // example URN value for triggerAuthSel.val()
+            // "urn:cspace:walkerart.org:exhibitionauthorities:name(exhibition) \
+            // :item:name(myexhibition1399233647751)'my exhibition'";
+
+            // regex pattern to match the authority item name including surrounding ()
+            var regexStr = /^.*:item:name(.*)\'.*\'$/;
+            var triggerAuthExec = regexStr.exec(triggerAuthSel.val());
+
+            // triggerAuthExec returns an array with the first index containing the string it matches
+            // then additional indexes containing parenthesized substring matches
+            var triggerAuthName = triggerAuthExec[1]; // (myexhibition1399233647751)
+
+            // compose the app layer URL that will give us the field values of the onView field
+            var url = that.options.args.appURL + triggerAuthName;
+
+            // takes authority record data and fills in corresponding fields
+            var fillFromAuthorityRecord = function(data, grouping){
+                // cycle through array of authority record fields to look up
+                for (var i=0;i<that.options.args.fields.length;i++){
+                    // the name of the authority record field should be capitalized
+                    // so we can append it to the common selector prefix, which is CamelCased
+                    var capitalizedFieldName = that.options.args.fields[i].charAt(0).toUpperCase() + that.options.args.fields[i].substring(1);
+
+                    // get the dom object that matches the common + capitalized field name
+                    // e.g. ".csc-presentation-calculated" + "VenueName" == ".csc-presentation-calculatedVenueName"
+                    // we assume this will only match one dom object
+                    var fieldSelector = $(grouping+capitalizedFieldName);
+
+                    // make sure the dom object exists 
+                    // AND is non-null
+                    if (fieldSelector && fieldSelector.length > 0) {
+                        // get value of authority record field value
+                        // note: we're only interested in the first entry [0] in the groupName array
+                        // since groupName is assumed to be a repeatable group
+                        var authFieldValue = data.fields[that.options.args.groupName][0][that.options.args.fields[i]];
+
+                        // make sure this authority record field's value exists and is not null
+                        if (authFieldValue && authFieldValue != '') {
+                            // either authFieldValueDeURN was never a URN value, or
+                            // it will be a string following the next string transformation
+                            var authFieldValueDeURN = authFieldValue;
+
+                            // convert any urns to strings for pretty-print display
+                            if (authFieldValue.indexOf("urn:") != -1) {
+                                // get the string name from the URN and overwrite
+                                // authFieldValueDeURN with this value
+                                authFieldValueDeURN = cspace.util.urnToString(authFieldValue);
+                            }
+
+                            // check if the input field is an auto-complete widget
+                            var hasAutoCompleteWidget = fieldSelector.siblings(that.options.selectors.siblingInputSelector);
+                            if (hasAutoCompleteWidget && hasAutoCompleteWidget.length > 0) {
+                                // change the fieldSelector .value and .defaultValues values
+                                fieldSelector.val(authFieldValue);
+                                fieldSelector[0].defaultValue = authFieldValue;
+
+                                // create a temporary attribute to the fieldSelector input field,
+                                // which will indicate to the autocomplete module that this field
+                                // has been updated and to update itself
+                                fieldSelector.attr("overridden", true);
+
+                                // trigger the change event for this field
+                                fieldSelector.change();
+
+                                // change the sibling input field value, which is the one rendered in the widget.
+                                // this expects a de-URN'ed value
+                                fieldSelector.siblings(that.options.selectors.siblingInputSelector).val(authFieldValueDeURN);
+                            } else {
+                                // insert authority record field's de-URN'ed value into corresponding field
+                                fieldSelector.val(authFieldValueDeURN);
+
+                                // if this field isn't disabled then force change event
+                                // TODO make this logic not reliant on a field being disabled
+                                if (!fieldSelector.attr("disabled")){
+                                    fieldSelector.change();
+                                }
+                            }
+                        }
+                    }
+                }
+                return null;
+            };
+                
+            $.get(url, function(data){
+                console.log("cspace.util.getCalculatedExhibitionTitle: retrieved referenced exhibition authority record: " + triggerAuthName);
+
+                // fill calculated fields from retrieved authority record
+                fillFromAuthorityRecord(data, that.options.selectors.calculatedSelectorPrefix);
+
+                // reenable copy from calculated button since authority data was gathered
+                $(that.options.buttons.copyCalculatedValues).removeAttr("disabled");
+
+                // set copy from calculated click event
+                $(that.options.buttons.copyCalculatedValues).click(function(){
+                    // fill overridden fields from retrieved authority record
+                    fillFromAuthorityRecord(data, that.options.selectors.overriddenSelectorPrefix);
+                    $(this).blur();
+                });
+
+            }).fail(function() {
+                console.log("cspace.util.getCalculatedExhibitionTitle: could not retrieve referenced exhibition authority record: " + triggerAuthName);
+            });
+
+            // set clear overridden values button click event
+            $(that.options.buttons.clearOverriddenValues).click(function(){
+                // find all input elements that start with the overriddenSelectorPrefix string.
+                // be sure to strip out the leading period from overriddenSelectorPrefix
+                $("input[class*='"+ that.options.selectors.overriddenSelectorPrefix.substring(1) + "']").each(function(){
+                    $(this).val("").change();
+                    $(this).siblings(that.options.selectors.siblingInputSelector).val("").change();
+                })
+                $(this).blur();
+            });
+
         }
 
         return that;

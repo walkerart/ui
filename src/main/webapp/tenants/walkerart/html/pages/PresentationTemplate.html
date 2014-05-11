@@ -40,39 +40,71 @@
                     <input type="text" class="csc-presentation-exhibitionTitle" />
                 </div>
             </div>
-
-            <div class="info-pair">
-                <div class="header">
-                    <div class="label csc-presentation-overrideExhibitionVenues-label"></div>
-                </div>
-                <div class="content">
-                    <input type="checkbox" class="csc-presentation-overrideExhibitionVenues" />
-                </div>
-            </div>
             
-            <div class="info-pair csc-presentation-updatedExhibitionVenueGroup-toggle">
+            <div class="info-pair csc-presentation-calculatedExhibitionVenueGroup-toggle">
                 <div class="header">
-                    <div class="label csc-presentation-updatedExhibitionVenueGroup-label"></div>
+                    <div class="label csc-presentation-calculatedExhibitionVenueGroup-label">Venue (calculated)</div>
                 </div>
                 <div class="content">
                     <table>
                         <thead>
                             <tr>
-                                <td class="csc-presentation-updatedVenueName-label"></td>
-                                <td class="csc-presentation-updatedVenueStartDate-label"></td>
-                                <td class="csc-presentation-updatedVenueEndDate-label"></td>
-                                <td class="csc-presentation-updatedVenueAttendance-label"></td>
+                                <td class="csc-presentation-calculatedVenueName-label"></td>
+                                <td class="csc-presentation-calculatedVenueStartDate-label"></td>
+                                <td class="csc-presentation-calculatedVenueEndDate-label"></td>
+                                <td class="csc-presentation-calculatedVenueAttendance-label"></td>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="csc-presentation-updatedExhibitionVenueGroup">
-                                <td><input type="text" class="csc-presentation-updatedVenueName" /></td>
-                                <td><input type="text" class="csc-presentation-updatedVenueStartDate" /></td>
-                                <td><input type="text" class="csc-presentation-updatedVenueEndDate" /></td>
-                                <td><input type="text" class="csc-presentation-updatedVenueAttendance" /></td>
+                            <tr class="csc-presentation-calculatedExhibitionVenueGroup">
+                                <td><input type="text" disabled="disabled" class="csc-presentation-calculatedVenueName" /></td>
+                                <td><input type="text" disabled="disabled" class="csc-presentation-calculatedVenueStartDate" /></td>
+                                <td><input type="text" disabled="disabled" class="csc-presentation-calculatedVenueEndDate" /></td>
+                                <td><input type="text" disabled="disabled" class="csc-presentation-calculatedVenueAttendance" /></td>
                             </tr>
                         </tbody>
                     </table>
+                </div>
+            </div>
+
+            <div class="info-pair">
+                <div class="header">
+                    <div class="label csc-presentation-overrideExhibitionVenue-label"></div>
+                </div>
+                <div class="content">
+                    <input type="checkbox" class="csc-presentation-overrideExhibitionVenue" />
+                </div>
+            </div>
+
+            <div class="csc-presentation-overriddenExhibitionVenueGroup-toggle">
+                <div class="button-row" style="padding-bottom:15px;">
+                    <input type="button" class="csc-copyCalculatedValues" disabled="disabled" value="Copy From Calculated">
+                    <input type="button" class="csc-clearOverriddenValues" value="Clear values">
+                </div>
+                <div class="info-pair">
+                    <div class="header">
+                        <div class="label csc-presentation-overriddenExhibitionVenueGroup-label">Venue (overridden)</div>
+                    </div>
+                    <div class="content">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td class="csc-presentation-overriddenVenueName-label"></td>
+                                    <td class="csc-presentation-overriddenVenueStartDate-label"></td>
+                                    <td class="csc-presentation-overriddenVenueEndDate-label"></td>
+                                    <td class="csc-presentation-overriddenVenueAttendance-label"></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="csc-presentation-overriddenExhibitionVenueGroup">
+                                    <td><input type="text" class="csc-presentation-overriddenVenueName" /></td>
+                                    <td><input type="text" class="csc-presentation-overriddenVenueStartDate" /></td>
+                                    <td><input type="text" class="csc-presentation-overriddenVenueEndDate" /></td>
+                                    <td><input type="text" class="csc-presentation-overriddenVenueAttendance" /></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
 

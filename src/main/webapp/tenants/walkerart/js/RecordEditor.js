@@ -37,9 +37,8 @@ cspace = cspace || {};
             controlPanel: ".csc-recordEditor-controlPanel-container",
             recordRendererContainer: ".csc-recordEditor-renderer-container",
             header: ".csc-recordEditor-header",
-            togglable: ".csc-recordEditor-togglable",
-            toggler: ".csc-presentation-overrideExhibitionVenues",
-            toggled: ".csc-presentation-updatedExhibitionVenueGroup-toggle",
+            toggler: ".csc-presentation-overrideExhibitionVenue",
+            toggled: ".csc-presentation-overriddenExhibitionVenueGroup-toggle",
             dimAddButton: ".csc-collection-object-dimension input.cs-repeatable-add",
             dimFieldOption: ".csc-collection-object-dimension li.cs-repeatable-repeat .csc-dimension-dimension",
             dimConvertParent: ".csc-measuredPartGroup-dimensionSubGroup",
@@ -211,9 +210,31 @@ cspace = cspace || {};
                 options: {
                     selectors: {
                         computedOnView: "{cspace.recordEditor}.options.selectors.computedOnView",
-                        currentLocation: "{cspace.recordEditor}.options.selectors.currentLocation",
+                        exhibitionTitle: "{cspace.recordEditor}.options.selectors.exhibitionTitle",
                         appURL: "{cspace.recordEditor}.options.selectors.appURL",
                         fieldName: "{cspace.recordEditor}.options.selectors.fieldName"
+                    }
+                },
+                createOnEvent: "afterRecordRender"
+            },
+            // WAC Get the calculated reference storage location record
+            getCalculatedExhibition: {
+                type: "cspace.util.getCalculatedExhibitionTitle",
+                options: {
+                    selectors: {
+                        calculatedSelectorPrefix: "{cspace.recordEditor}.options.selectors.calculatedSelectorPrefix",
+                        overriddenSelectorPrefix: "{cspace.recordEditor}.options.selectors.overriddenSelectorPrefix",
+                        triggerAuthSelector: "{cspace.recordEditor}.options.selectors.triggerAuthSelector",
+                        siblingInputSelector: "{cspace.recordEditor}.options.selectors.siblingInputSelector"
+                    },
+                    args: {
+                        appURL: "{cspace.recordEditor}.options.args.appURL",
+                        groupName: "{cspace.recordEditor}.options.args.groupName",
+                        fields: "{cspace.recordEditor}.options.args.fields"
+                    },
+                    buttons: {
+                        copyCalculatedValues: "{cspace.recordEditor}.options.buttons.copyCalculatedValues",
+                        clearOverriddenValues: "{cspace.recordEditor}.options.buttons.clearOverriddenValues"
                     }
                 },
                 createOnEvent: "afterRecordRender"

@@ -114,6 +114,19 @@ media-publiclyAccessibleWACLabel: Publicly accessible
 intake-entryMethodsLabel: Carrier
 intake-entryMethodLabel: Carrier
 
+#presentation
+presentation-overrideExhibitionVenueLabel: Override Exhibition Venue data
+presentation-calculatedExhibitionVenueGroupLabel: Venue (calculated)
+presentation-calculatedVenueNameLabel: Venue Name
+presentation-calculatedVenueStartDateLabel: Venue Start Date
+presentation-calculatedVenueEndDateLabel: Venue End Date
+presentation-calculatedVenueAttendanceLabel: Attendance
+presentation-overriddenExhibitionVenueGroupLabel: Venue (overridden)
+presentation-overriddenVenueNameLabel: Venue Name
+presentation-overriddenVenueStartDateLabel: Venue Start Date
+presentation-overriddenVenueEndDateLabel: Venue End Date
+presentation-overriddenVenueAttendanceLabel: Attendance
+
 #Movement
 movement-onViewWACLabel: On view (overridden)
 movement-computedOnViewLabel: On view (calculated)

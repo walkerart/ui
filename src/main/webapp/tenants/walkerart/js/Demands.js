@@ -1113,6 +1113,10 @@ https://source.collectionspace.org/collection-space/LICENSE.txt
         fluid.demands("getCalculatedStorageLocation", "cspace.recordEditor", {
             container: "{recordEditor}.container"
         });
+        // WAC Get the calculated reference exhibition location record
+        fluid.demands("getCalculatedExhibition", "cspace.recordEditor", {
+            container: "{recordEditor}.container"
+        });
         fluid.demands("togglable", "cspace.relatedRecordsTab", {
             container: "{relatedRecordsTab}.container"
         });
