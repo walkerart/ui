@@ -2276,7 +2276,7 @@ fluid.registerNamespace("cspace.util");
         // AND has a non-null value,
         // which indicates the record has been saved
         var triggerAuthSel = that.locate("triggerAuthSelector");
-        if (triggerAuthSel && triggerAuthSel.val().length > 0) {
+        if (triggerAuthSel && triggerAuthSel.length > 0 && triggerAuthSel.val().length > 0) {
             // example URN value for triggerAuthSel.val()
             // "urn:cspace:walkerart.org:exhibitionauthorities:name(exhibition) \
             // :item:name(myexhibition1399233647751)'my exhibition'";
