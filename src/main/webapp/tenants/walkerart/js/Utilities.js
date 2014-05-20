@@ -1696,6 +1696,9 @@ fluid.registerNamespace("cspace.util");
     });
 
     cspace.util.validateNumber = function (number, type) {
+        if (type === "currency") {
+            number = number.replace(/,/g,"");
+        }
         if (number === null) {
             return false;
         }
@@ -1712,7 +1715,7 @@ fluid.registerNamespace("cspace.util");
         if (type === "integer") {
             return number.indexOf(".") < 0;
         }
-        if (type === "float") {
+        if (type === "float" || type === "currency") {
             return number.split(".").length <= 2;
         }
         return true;
@@ -1754,6 +1757,7 @@ fluid.registerNamespace("cspace.util");
         switch (type) {
         case "integer":
             return validateParseNumber(value, type, parseInt, validate, message);
+        case "currency":
         case "float":
             return validateParseNumber(value, type, parseFloat, validate, message);
         default:
@@ -2393,6 +2397,44 @@ fluid.registerNamespace("cspace.util");
 
         }
 
+        return that;
+    };
+
+    // WAC Currency display 
+    fluid.defaults("cspace.util.currencyDisplay", {
+        gradeNames: ["fluid.viewComponent"],
+        selectors: {
+            currencyDisplayClass: "input.currency-display",
+            currencyHideClass: "input.currency-hide"
+        }
+    });
+    cspace.util.currencyDisplay = function () {
+        var that = fluid.initLittleComponent("cspace.util.currencyDisplay", null);
+        
+        // check to see if any currency display fields are present
+        var triggerCurrencySel = that.options.selectors.currencyDisplayClass;
+        if (triggerCurrencySel && triggerCurrencySel.length > 0){
+
+            // for each currency display fields found
+            $(triggerCurrencySel).each(function(index){
+
+                // make sure there is a corresponding sibling input field present
+                var currencySibling = $(this).siblings(that.options.selectors.currencyHideClass);
+                if (currencySibling && currencySibling.length > 0){
+
+                    // hide the sibling field
+                    currencySibling.hide();
+
+                    // create change event to copy over currency input value to the sibling field,
+                    // but without any commas
+                    $(this).change(function(){
+                        var currencyVal = $(this).val();
+                        $(currencySibling).val(currencyVal.replace(/,/g, "")).change();
+                    });
+                }
+            });
+        }
+        
         return that;
     };
 

@@ -361,6 +361,9 @@ cspace = cspace || {};
 
         // WAC Reapply Dimension Conversion event handlers
         cspace.util.dimensionConvert(that.container);
+
+        // WAC Reapply Currency Display event handlers
+        cspace.util.currencyDisplay();
     };
     
     // Function to get only part of the UIspec

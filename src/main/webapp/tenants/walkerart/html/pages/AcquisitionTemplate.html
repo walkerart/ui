@@ -156,8 +156,8 @@
                         <tbody>
                             <tr class="csc-acquisition-acquisitionFundingWAC">
                                 <td><select class="csc-acquisition-acquisitionFundingCurrencyWAC input-select input-money-type"><option value="">Options not loaded</option></select></td>
-                                <td><input type="text"  class="csc-acquisition-acquisitionFundingValueWAC" /></td>
-                                <td><input type="text"  class="csc-acquisition-acquisitionFundingCostWAC" /></td>
+                                <td><input type="text" class="currency-hide csc-acquisition-acquisitionFundingValueWAC" /><input type="text" class="currency-display csc-acquisition-acquisitionFundingValueWACCurrency" /></td>
+                                <td><input type="text" class="currency-hide csc-acquisition-acquisitionFundingCostWAC" /><input type="text" class="currency-display csc-acquisition-acquisitionFundingCostWACCurrency" /></td>
                                 <td><input type="text"  class="csc-acquisition-acquisitionFundingSourceWAC" /></td>
                                 <td><input type="text"  class="csc-acquisition-acquisitionFundingSourceProvisosWAC" /></td>
                             </tr>
@@ -181,42 +181,42 @@
             <div class="info-column2-50 fl-force-right">
                 <div class="info-pair">
                     <div class="header">
-                        <div class="label csc-acquisition-objectPurchaseOfferPriceCurrency-label"></div>
+                        <div class="label">Price Information</div>
                     </div>
                     <div class="content">
                         <table>
                             <thead>
                                 <tr>
-                                    <td class="csc-acquisition-objectOfferPriceCurrency-label"></td>
-                                    <td class="csc-acquisition-groupPurchasePriceCurrency-label"></td>
-                                    <td class="csc-acquisition-groupPurchasePriceValue-label"></td>
+                                    <td class="">Purchase Price Type</td>
+                                    <td class="">Currency</td>
+                                    <td class="">Value</td>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="label csc-acquisition-objectPurchasePriceValue-label"></td>
+                                    <td class="label csc-acquisition-groupPurchasePriceCurrency-label"></td>
                                     <td><select class="csc-acquisition-group-purchase-price-currency input-select input-money-type"><option value="">Options not loaded</option></select></td>
-                                    <td><input type="text" class="input-numeric-medium csc-acquisition-group-purchase-price-value" value="" /></td>
+                                    <td><input type="text" class="currency-hide input-numeric-medium csc-acquisition-group-purchase-price-value"/><input type="text" class="currency-display input-numeric-medium csc-acquisition-groupPurchasePriceValueCurrency"/></td>
                                 </tr>
                                 <tr>
-                                    <td class="label csc-acquisition-objectOfferPriceValue-label"></td>
+                                    <td class="label csc-acquisition-objectOfferPriceCurrency-label"></td>
                                     <td><select class="csc-acquisition-object-offer-price-currency input-select input-money-type"><option value="">Options not loaded</option></select></td>
-                                    <td><input type="text" class="input-numeric-medium csc-acquisition-object-offer-price-value" value="" /></td>
+                                    <td><input type="text" class="currency-hide input-numeric-medium csc-acquisition-object-offer-price-value"/><input type="text" class="currency-display input-numeric-medium csc-acquisition-objectOfferPriceValueCurrency"/></td>
                                 </tr>
                                 <tr>
-                                    <td class="label csc-acquisition-objectPurchaseOfferPriceValue-label"></td>
+                                    <td class="label csc-acquisition-objectPurchaseOfferPriceCurrency-label"></td>
                                     <td><select class="csc-acquisition-object-purchase-offer-price-currency input-select input-money-type"><option value="">Options not loaded</option></select></td>
-                                    <td><input type="text" class="input-numeric-medium csc-acquisition-object-purchase-offer-price-value" value="" /></td>
+                                    <td><input type="text" class="currency-hide input-numeric-medium csc-acquisition-object-purchase-offer-price-value"/><input type="text" class="currency-display input-numeric-medium csc-acquisition-objectPurchaseOfferPriceValueCurrency"/></td>
                                 </tr>
                                 <tr>
                                     <td class="label csc-acquisition-objectPurchasePriceCurrency-label"></td>
                                     <td><select class="csc-acquisition-object-purchase-price-currency input-select input-money-type"><option value="">Options not loaded</option></select></td>
-                                    <td><input type="text" class="input-numeric-medium csc-acquisition-object-purchase-price-value" value="" /></td>
+                                    <td><input type="text" class="currency-hide input-numeric-medium csc-acquisition-object-purchase-price-value"/><input type="text" class="currency-display input-numeric-medium csc-acquisition-objectPurchasePriceValueCurrency"/></td>
                                 </tr>
                                 <tr>
                                     <td class="label csc-acquisition-originalObjectPurchasePriceCurrency-label"></td>
                                     <td><select class="csc-acquisition-original-object-purchase-price-currency input-select input-money-type"><option value="">Options not loaded</option></select></td>
-                                    <td><input type="text" class="input-numeric-medium csc-acquisition-original-object-purchase-price-value" value="" /></td>
+                                    <td><input type="text" class="currency-hide input-numeric-medium csc-acquisition-original-object-purchase-price-value"/><input type="text" class="currency-display input-numeric-medium csc-acquisition-originalObjectPurchasePriceValueCurrency"/></td>
                                 </tr>
                             </tbody>
                         </table>

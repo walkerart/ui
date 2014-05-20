@@ -1117,6 +1117,10 @@ https://source.collectionspace.org/collection-space/LICENSE.txt
         fluid.demands("getCalculatedExhibition", "cspace.recordEditor", {
             container: "{recordEditor}.container"
         });
+        // WAC Currency display field
+        fluid.demands("getCurrencyDisplay", "cspace.recordEditor", {
+            container: "{recordEditor}.container"
+        });
         fluid.demands("togglable", "cspace.relatedRecordsTab", {
             container: "{relatedRecordsTab}.container"
         });

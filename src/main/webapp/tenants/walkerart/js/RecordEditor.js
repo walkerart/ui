@@ -239,6 +239,17 @@ cspace = cspace || {};
                 },
                 createOnEvent: "afterRecordRender"
             },
+            // WAC Get the calculated reference storage location record
+            getCurrencyDisplay: {
+                type: "cspace.util.currencyDisplay",
+                options: {
+                    selectors: {
+                        currencyDisplayClass: "{cspace.recordEditor}.options.selectors.currencyDisplayClass",
+                        currencyHideClass: "{cspace.recordEditor}.options.selectors.currencyHideClass"
+                    }
+                },
+                createOnEvent: "afterRecordRender"
+            },
             // Component that applies read only styling for all of record
             // editor.
             readOnly: {

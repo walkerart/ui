@@ -46,6 +46,7 @@ collection-object-technicalAttributeMeasurementLabel: Text
 collection-object-formatWACLabel: Format
 collection-object-collectionWACLabel: Collection
 collection-object-catalogNumberWACLabel: Catalog Number
+collection-object-ownershipExchangePriceValueCurrencyLabel: Price - value
 
 #Acquisition
 acquisition-acquisitionReasonLabel: Curator of Record
@@ -54,9 +55,39 @@ acquisition-insuredByWACLabel: Insured by
 acquisition-acquisitionFundingWACLabel: Acquisition Funding
 acquisition-acquisitionFundingCurrencyWACLabel: Currency
 acquisition-acquisitionFundingValueWACLabel: Value
+acquisition-acquisitionFundingValueCurrencyLabel: Value
 acquisition-acquisitionFundingCostWACLabel: Cost
+acquisition-acquisitionFundingCostCurrencyLabel: Cost
 acquisition-acquisitionFundingSourceWACLabel: Funding source
 acquisition-acquisitionFundingSourceProvisosWACLabel: Source provisos
+
+acquisition-originalObjectPurchasePriceLabel: Original purchase price
+acquisition-originalObjectPurchasePriceCurrencyLabel: Original purchase price
+acquisition-originalObjectPurchasePriceValueLabel: Original purchase price value
+acquisition-originalObjectPurchasePriceValueCurrencyLabel: Original purchase price value
+
+acquisition-groupPurchasePriceLabel: Group purchase price
+acquisition-groupPurchasePriceCurrencyLabel: Group purchase price
+acquisition-groupPurchasePriceValueLabel: Group purchase price value
+acquisition-groupPurchasePriceValueCurrencyLabel: Group purchase price value
+
+acquisition-objectPurchasePriceLabel: Purchase price
+acquisition-objectPurchasePriceCurrencyLabel: Purchase price
+acquisition-objectPurchasePriceValueLabel: Purchase price value
+acquisition-objectPurchasePriceValueCurrencyLabel: Purchase price value
+
+acquisition-objectOfferPriceLabel: Offer Price Type
+acquisition-objectOfferPriceCurrencyLabel: Offer Price
+acquisition-objectOfferPriceValueLabel: Offer price value
+acquisition-objectOfferPriceValueCurrencyLabel: Offer price value
+
+acquisition-objectPurchaseOfferPriceLabel: Purchase offer price
+acquisition-objectPurchaseOfferPriceCurrencyLabel: Purchase offer price
+acquisition-objectPurchaseOfferPriceValueLabel: Purchase offer price value
+acquisition-objectPurchaseOfferPriceValueCurrencyLabel: Purchase offer price value
+
+
+
 
 #Person
 person-occupationsLabel: Role(s)
@@ -113,6 +144,9 @@ media-publiclyAccessibleWACLabel: Publicly accessible
 #intake
 intake-entryMethodsLabel: Carrier
 intake-entryMethodLabel: Carrier
+
+#valuationcontrol
+valuationcontrol-valueAmountCurrencyLabel: Amount
 
 #presentation
 presentation-overrideExhibitionVenueLabel: Override Exhibition Venue data
