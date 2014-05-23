@@ -2594,3 +2594,38 @@ td.fl-date-group .cs-calendar-button {
     height:inherit;
 }
 
+/* style the modified date/record last modified by fields */
+.inline-block .info-column {
+    display: inline-block;
+    width:auto;
+    margin-right:.5em;
+}
+
+.inline-block .info-column .info-pair{
+    margin-bottom: 0;
+}
+
+.read-only input.input-date.cs-updatedAt,
+.read-only input.cs-updatedBy,
+.read-only input.input-date.cs-updatedAt:hover,
+.read-only input.cs-updatedBy:hover {
+    border: none;
+    background-color: inherit !important;
+    cursor: inherit;
+}
+
+.read-only .cs-calendar-button {
+    display: none;
+}
+
+.read-only input.input-date.cs-updatedAt {
+    width:11em !important;
+    min-width:11em;
+}
+
+.read-only input.cs-updatedBy {
+    width:18em !important;
+    min-width:18em;
+}
+
+
